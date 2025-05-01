@@ -1,11 +1,47 @@
 /* base.css */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #222;
-    background: #fff;
-    
+    color: var(--text-color); /* color applies to text */
+    background-color: var(--background-color);
+    font-family: "Urbanist", sans-serif;
 }
+    
+h1 {
+    font-size: 4.2rem;
+    color: var(--primary-color);
+}
+h2 {
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+h3 {
+    font-size: 1.6rem;
+}
+h4 {
+    font-size: 1rem; /* 20px */
+    color: var(--secondary-color);
+    font-weight: 700; 
+}
+h5 {
+    font-size: 0.75rem; /* 16px */
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+p {
+    font-size: 1rem; /* 16px */
+}
+
+/* line height */
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    line-height: 1.5;
+}
+
+/* Dette er fra tidligere */
 a {
     color: #555555;
     text-decoration: none;
