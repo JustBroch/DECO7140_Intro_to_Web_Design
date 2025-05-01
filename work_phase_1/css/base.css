@@ -4,6 +4,16 @@ body {
     font-family: "Urbanist", sans-serif;
 }
 
+:root {
+    --color-primary: #999ac6;
+    --color-secondary: #0b3954;
+    --color-dark: #798071;
+    --color-bright: #ff5a5f;
+
+    --color-background: #ffffff;
+    --color-text: #000000;
+}
+
 h1 {
     font-size: 4rem; /* 32px */
     color: #999ac6; /* Light purple */
