@@ -1,8 +1,60 @@
-/* reset.css */
+/* RESET — full reset including animations and transitions */
 *,
 *::before,
 *::after {
     margin: 0;
     padding: 0;
+    border: 0;
     box-sizing: border-box;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* Remove list styles */
+ol,
+ul {
+    list-style: none;
+}
+
+/* Remove quotes from blockquotes and q */
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+    content: "";
+    content: none;
+}
+
+/* Remove default table border spacing */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Remove default link styling */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Disable animations and transitions globally */
+* {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+}
+
+/* Set basic styles */
+html,
+body {
+    height: 100%;
+    line-height: 1;
+    background-color: #fff;
+    color: #000;
+    font-family: sans-serif;
 }
