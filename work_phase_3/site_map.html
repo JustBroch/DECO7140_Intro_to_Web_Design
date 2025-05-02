@@ -9,21 +9,111 @@
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/page_css/site_map.css" />
+        <link rel="stylesheet" href="css/component_skeletons/accordion.css" />
 
         <link rel="icon" type="image/png" href="assets/16.png" />
 
         <title>Work Phase 3</title>
     </head>
     <body>
-        <nav id="nav-mobile" aria-label="Main Navigation"></nav>
+        <nav id="nav-mobile" aria-label="Main Navigation">
+            <ul>
+                <li>
+                    <a href="index.html"><span class="icon">🏠</span></a>
+                </li>
+                <li>
+                    <a href="site_map.html"><span class="icon">🧭</span></a>
+                </li>
+                <li>
+                    <a href="style_guide.html"><span class="icon">🎨</span></a>
+                </li>
+                <li>
+                    <a href="ethical_response.html"
+                        ><span class="icon">⚖️</span></a
+                    >
+                </li>
+                <li>
+                    <a href="genai_mt_acknowledgement.html"
+                        ><span class="icon">🤖</span></a
+                    >
+                </li>
+            </ul>
+        </nav>
 
-        <nav id="nav-desktop" aria-label="Main Navigation"></nav>
+        <nav id="nav-desktop" aria-label="Main Navigation">
+            <ul>
+                <li>
+                    <a href="index.html">WP3 Home</a>
+                </li>
+                <li>
+                    <a href="site_map.html">Site Map</a>
+                </li>
+                <li>
+                    <a href="style_guide.html">Style Guide</a>
+                </li>
+                <li>
+                    <a href="ethical_response.html">Ethical Response</a>
+                </li>
+                <li>
+                    <a href="genai_mt_acknowledgement.html"
+                        >GenAI Acknowledgement</a
+                    >
+                </li>
+            </ul>
+        </nav>
 
         <main>
             <div class="container">
                 <h1>Site Map</h1>
-                <p>Sample text for size comparison</p>
+                <p>
+                    A visual and textual map showing the structure of the
+                    website, how pages are linked, and the user’s expected
+                    navigation flow across both mobile and desktop.
+                </p>
+
+                <img
+                    src="assets/site_map.png"
+                    alt="Site Map"
+                    class="responsive-img"
+                />
+
+                <section class="accordion m-y-3">
+                    <div class="accordion-item">
+                        <button class="accordion-header">▷ Inspiration</button>
+                        <div class="accordion-content">
+                            <p class="m-y-3">
+                                Central hub for users to see and share inspiring
+                                content. Supports the client's goal of
+                                empowering users with knowledge and User story
+                                'As a ...'.
+                                <span style="color: var(--accent2-color)">
+                                    Note: this should be your content! These are
+                                    your annotations (see L08 for details).
+                                </span>
+                            </p>
+
+                            <!-- Nested Accordion for Sub-pages -->
+                            <div class="accordion nested">
+                                <div class="accordion-item">
+                                    <button class="accordion-header">
+                                        ▹▷ Garden Showcase
+                                    </button>
+                                    <div class="accordion-content">
+                                        <p class="m-y-3">
+                                            THIS SHOULD BE YOUR ANNOTATION FOR
+                                            YOUR WEBSITE A showcase of inspiring
+                                            food gardens. Supports ...
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </main>
+        <!-- Linking to External JavaScript -->
+        <script type="module" src="js/site_map.js"></script>
     </body>
 </html>
