@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/page_css/behavioural_design.css" />
+        <link rel="stylesheet" href="js/behavioural_design.js" />
 
         <link rel="icon" type="image/png" href="assets/16.png" />
 
@@ -63,12 +65,82 @@
 
         <main>
             <div class="container">
-                <h1>Behavioural Design</h1>
+                <h1 class="m-y-5">Behavioural Design</h1>
+                <h3>
+                    The focus of this section of the Style Guide is ensuring
+                    user needs for usability and function are supported.
+                </h3>
                 <p>
-                    This page describes how the interactive design supports user
-                    behaviour by making the interface intuitive, usable, and
-                    responsive.
+                    This page explores how the site’s visual design creates an
+                    immediate emotional impression through colours, typography,
+                    and layout.
                 </p>
+
+                <article>
+                    <h2 class="m-t-3">Link Styles</h2>
+                    <p>
+                        This section shows how link states (normal, hover,
+                        visited) are styled for accessibility and clarity.
+                    </p>
+                    <p>*Photo of mockup here*</p>
+                </article>
+
+                <article>
+                    <h2 class="m-t-3">Menus and Navigation</h2>
+                    <p>
+                        The navigation reflects the site's information
+                        architecture and supports usability through clear labels
+                        and grouping.
+                    </p>
+                    <p>*Navigation mock up*</p>
+                </article>
+
+                <article>
+                    <h2 class="m-t-3">Card Components</h2>
+                    <p>
+                        This section includes visual mock-ups of card components
+                        used for summarising content or directing users to more
+                        detail.
+                    </p>
+                    <p>
+                        *Card layout showing content structure and interaction*
+                    </p>
+                </article>
+
+                <!-- Button Styles Showcase -->
+                <section class="button-styles m-y-5">
+                    <h2>Button Styles</h2>
+                    <div class="button-example">
+                        <h3>Primary Button</h3>
+                        <button class="btn-primary">Join Now</button>
+                        <button class="btn-primary" disabled>Join Now</button>
+                        <p class="explanation">
+                            High-contrast primary action. Hover og
+                            pressed-tilstander gir tydelig visuell
+                            tilbakemelding, disabled-stil viser “ikke klikkbar”.
+                        </p>
+                    </div>
+                    <div class="button-example">
+                        <h3>Secondary Button</h3>
+                        <button class="btn-secondary">Learn More</button>
+                        <button class="btn-secondary" disabled>
+                            Learn More
+                        </button>
+                        <p class="explanation">
+                            Mindre fremhevet alternativsknapp.
+                            Hover/pressed-effekter uten å bryte fargepaletten.
+                        </p>
+                    </div>
+                    <div class="button-example">
+                        <h3>Icon Button</h3>
+                        <button class="btn-icon" aria-label="Search">🔍</button>
+                        <p class="explanation">
+                            Ren ikon-knapp med <code>aria-label</code> for
+                            skjermlesere. Egner seg til verktøy som søk eller
+                            lukke-funksjoner.
+                        </p>
+                    </div>
+                </section>
             </div>
         </main>
     </body>
