@@ -1,0 +1,26 @@
+@import "../css/component_skeletons/card.css";
+
+.card {
+    background-color: var(--background-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card {
+    width: 100%;
+}
+
+/* site_map.css */
+@media (min-width: 768px) {
+    .card {
+        width: calc(
+            33.33% - 14px
+        ); /* Approximately 3 cards per row with gap considered */
+        margin-bottom: 20px; /* Add bottom margin for wrapped rows */
+    }
+}

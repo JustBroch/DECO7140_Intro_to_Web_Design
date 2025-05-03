@@ -70,3 +70,18 @@ nav ul {
         display: none;
     }
 }
+
+/* -- reusable container for cards -- */
+.card-container {
+    display: flex;
+    flex-direction: column; /* mobile first: vertically */
+    gap: 1rem; /* distance between cards */
+    padding: 1rem;
+}
+
+@media (min-width: 768px) {
+    .card-container {
+        flex-direction: row; /* on desktop: rows */
+        flex-wrap: wrap; /* if full -> new row */
+    }
+}

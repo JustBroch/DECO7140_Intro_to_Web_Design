@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/page_css/visceral_design.css" />
+        <link rel="stylesheet" href="js/visceral_design.js" />
 
         <link rel="icon" type="image/png" href="assets/16.png" />
 
@@ -63,12 +65,57 @@
 
         <main>
             <div class="container">
-                <h1>Visceral Design</h1>
+                <h1 class="m-y-5">Visceral Design</h1>
+                <h3>
+                    The focus of this section of the Style Guide is ensuring the
+                    user has a good first impression of the site.
+                </h3>
                 <p>
                     This page explores how the site’s visual design creates an
                     immediate emotional impression through colours, typography,
                     and layout.
                 </p>
+                <article>
+                    <h2 class="m-t-3">Page Layouts</h2>
+
+                    <!-- gallery of small images -->
+                    <section class="gallery m-t-3">
+                        <img
+                            src="assets/site_map_desktop.png"
+                            alt="Site Map for desktop"
+                        />
+                        <img
+                            src="assets/site_map_mobile.png"
+                            alt="Site Map for mobile"
+                        />
+                        <img
+                            src="assets/site_map_desktop.png"
+                            alt="Site Map for desktop"
+                        />
+                        <img
+                            src="assets/site_map_mobile.png"
+                            alt="Site Map for mobile"
+                        />
+
+                        <!-- Large Image Viewer -->
+                        <aside class="viewer" id="viewer" aria-hidden="true">
+                            <button
+                                id="close-viewer"
+                                aria-label="Close image viewer"
+                            >
+                                ✖
+                            </button>
+                            <img id="viewer-img" src="" alt="" />
+                            <p id="viewer-caption"></p>
+                        </aside>
+                    </section>
+                </article>
+                <article>
+                    <h2 class="m-t-3">Colour Scheme</h2>
+                </article>
+                <article>
+                    <h2 class="m-t-3">Typography</h2>
+                </article>
             </div>
         </main>
     </body>
