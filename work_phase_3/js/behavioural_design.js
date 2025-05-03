@@ -1,3 +1,5 @@
+import { postFormData } from "./modules/postFormData.js";
+
 /**
  * IMPORTS
  * Keep track of external modules being used
@@ -24,3 +26,29 @@
 
 // when the page fully loads
  * */
+
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("community-form");
+    const feedback = document.getElementById("form-feedback");
+
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const { success, data } = await postFormData(
+            form,
+            "https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/community/",
+            {
+                student_number: "s4908436",
+                uqcloud_zone_id: "29b86239",
+            }
+        );
+
+        if (success) {
+            feedback.textContent = data.message || "Successfully submitted!";
+            form.reset();
+        } else {
+            feedback.textContent =
+                data.message || "Something went wrong. Please try again.";
+        }
+    });
+});

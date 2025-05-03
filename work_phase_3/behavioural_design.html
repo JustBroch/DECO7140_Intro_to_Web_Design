@@ -141,7 +141,48 @@
                         </p>
                     </div>
                 </section>
+
+                <article>
+                    <h2 class="m-t-3">Form Example</h2>
+                    <p>
+                        This form includes real-time validation and submits data
+                        to an API. Feedback is provided on both validation
+                        errors and API success/failure.
+                    </p>
+                    <form id="community-form" enctype="multipart/form-data">
+                        <label for="name"><h4>Full Name</h4></label>
+                        <input type="text" id="name" name="name" required />
+
+                        <label for="email"><h4>Email</h4></label>
+                        <input type="email" id="email" name="email" required />
+
+                        <label for="message"><h4>Message (optional)</h4></label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="4"
+                            placeholder="Optional introduction..."
+                        ></textarea>
+
+                        <label for="photo"
+                            ><h4>Upload a Photo (optional)</h4></label
+                        >
+                        <input
+                            type="file"
+                            id="photo"
+                            name="photo"
+                            accept="image/*"
+                        />
+
+                        <button type="submit" class="btn btn-primary m-t-2">
+                            Join the Community
+                        </button>
+                    </form>
+
+                    <p id="form-feedback" class="m-t-3" aria-live="polite"></p>
+                </article>
             </div>
         </main>
+        <script type="module" src="js/behavioural_design.js"></script>
     </body>
 </html>
