@@ -10,11 +10,12 @@
 }
 
 section > * + * {
-    margin-top: 1rem; /* Gir luft mellom hvert element inni <section> */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 body {
-    font-family: "Roboto", sans-serif; /* new */
+    font-family: "Roboto", sans-serif;
     color: var(--text-color);
     background-color: var(--background-color);
 }
@@ -29,14 +30,19 @@ h2 {
     font-size: 2.6rem;
     font-weight: 700;
     margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 h3 {
     font-size: 1.6rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 h4 {
     font-size: 1rem;
     color: var(--secondary-color);
     font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 h5 {
     font-size: 0.75rem;
@@ -45,5 +51,6 @@ h5 {
 }
 
 p {
-    font-size: 1rem; /* 16px */
+    font-size: 1rem;
+    line-height: 1.6; /* Legg til denne linjen */
 }
