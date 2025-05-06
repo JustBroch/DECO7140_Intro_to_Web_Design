@@ -2,5 +2,10 @@
 
 .accordion-header {
     background-color: var(--primary-color);
-    color: white;
+}
+
+.accordion.nested {
+    margin-left: 1rem;
+    border-left: 2px solid var(--secondary-color);
+    padding-left: 1rem;
 }
