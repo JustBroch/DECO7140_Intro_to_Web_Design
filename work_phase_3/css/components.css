@@ -27,6 +27,7 @@ nav ul {
     padding: 1rem 0;
     font-size: 1.5rem;
     text-decoration: none;
+    z-index: 1000;
 }
 
 #nav-desktop {
@@ -36,6 +37,7 @@ nav ul {
     background-color: var(--secondary-color);
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
     display: none;
+    z-index: 1000;
 }
 
 #nav-desktop ul li a {
@@ -61,6 +63,13 @@ nav ul {
 
 /* MENUS */
 /* Responsive control */
+
+@media screen and (max-width: 767px) {
+    .container {
+        padding-bottom: 70px;
+    }
+}
+
 @media screen and (min-width: 768px) {
     #nav-desktop {
         display: block;
