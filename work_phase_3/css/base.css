@@ -6,7 +6,7 @@
     --primary-color: #c5cdc7;
     --secondary-color: #ebe3d5;
     --accent-color: #b0a695;
-    --text-color: #black;
+    --text-color: #000;
 }
 
 section > * + * {
@@ -51,5 +51,11 @@ h5 {
 
 p {
     font-size: 1rem;
-    line-height: 1.6; /* Legg til denne linjen */
+    line-height: 1.6;
+}
+
+ul,
+li {
+    font-size: 1rem;
+    line-height: 1.6;
 }

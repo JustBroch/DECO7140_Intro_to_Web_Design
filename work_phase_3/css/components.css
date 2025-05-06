@@ -49,8 +49,7 @@ nav ul {
 }
 
 #nav-desktop ul li a:hover {
-    background-color: var(--accent-color); /* f.eks. en rød bakgrunn */
-    color: white; /* kontrastfarge for teksten/ikonet */
+    font-weight: bold;
     border-radius: 8px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -59,6 +58,7 @@ nav ul {
     display: block;
     max-width: 100%;
     height: auto;
+    margin: 1rem auto;
 }
 
 /* MENUS */
@@ -93,12 +93,4 @@ nav ul {
         flex-direction: row; /* on desktop: rows */
         flex-wrap: wrap; /* if full -> new row */
     }
-}
-
-/* Makes images responsive across all devices */
-.responsive-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 1rem auto; /* optional: adds spacing and centers on page */
 }

@@ -11,6 +11,8 @@
         <link rel="stylesheet" href="css/components.css" />
         <link rel="stylesheet" href="css/page_css/style_guide.css" />
         <link rel="stylesheet" href="js/style_guide.js" />
+        <link rel="stylesheet" href="css/component_skeletons/gallery.css" />
+        <link rel="stylesheet" href="css/component_skeletons/viewer.css" />
 
         <link rel="icon" type="image/png" href="assets/16.png" />
 
@@ -23,7 +25,9 @@
                     <a href="index.html"><span class="icon">&#8962;</span></a>
                 </li>
                 <li>
-                    <a href="site_map.html"><span class="icon">&#9873;</span></a>
+                    <a href="site_map.html"
+                        ><span class="icon">&#9873;</span></a
+                    >
                 </li>
                 <li>
                     <a href="style_guide.html" aria-current="page"
@@ -45,43 +49,22 @@
 
         <nav id="nav-desktop" aria-label="Main Navigation">
             <ul>
-                <li>
-                    <a href="index.html">WP3 Home</a>
-                </li>
-                <li>
-                    <a href="site_map.html">Site Map</a>
-                </li>
+                <li><a href="index.html">WP3 Home</a></li>
+                <li><a href="site_map.html">Site Map</a></li>
                 <li>
                     <a href="style_guide.html" aria-current="page"
                         >Style Guide</a
                     >
                 </li>
-                <li>
-                    <a href="ethical_response.html">Ethical Response</a>
-                </li>
-                <li>
-                    <a href="genai_mt_acknowledgement.html">GenAI</a>
-                </li>
+                <li><a href="ethical_response.html">Ethical Response</a></li>
+                <li><a href="genai_mt_acknowledgement.html">GenAI</a></li>
             </ul>
         </nav>
 
         <main>
             <div class="container">
                 <h1>Style Guide</h1>
-                <p>
-                    This is the style guide for the XXX website created as a
-                    concept for the Connected Communities Initiative.
-                </p>
-                <p>
-                    This page presents the visual language and design standards
-                    used across the site, including colour palette, typography,
-                    spacing, and components.
-                </p>
-                <img
-                    src="assets/site_map_desktop.png"
-                    alt="Site Map"
-                    class="responsive-img"
-                />
+
                 <section class="card-container m-y-5">
                     <div class="card">
                         <h3>Visceral Design</h3>
@@ -104,7 +87,7 @@
                     <div class="card">
                         <h3>Reflective Design</h3>
                         <p>
-                            How the design supports long term user values and
+                            How the design supports long-term user values and
                             identity.
                         </p>
                         <button>
@@ -114,5 +97,6 @@
                 </section>
             </div>
         </main>
+        <script type="module" src="js/style_guide.js"></script>
     </body>
 </html>
