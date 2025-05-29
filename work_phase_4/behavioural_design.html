@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- CSS Linking -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/page_css/behavioural_design.css" />
+        <link rel="stylesheet" href="js/behavioural_design.js" />
+
+        <link rel="icon" type="image/png" href="assets/16.png" />
+
+        <title>Work Phase 3</title>
+    </head>
+    <body>
+        <nav id="nav-mobile" aria-label="Main Navigation">
+            <ul>
+                <li>
+                    <a href="index.html"><span class="icon">&#8962;</span></a>
+                </li>
+                <li>
+                    <a href="site_map.html"
+                        ><span class="icon">&#9873;</span></a
+                    >
+                </li>
+                <li>
+                    <a href="style_guide.html"
+                        ><span class="icon">&#9733;</span></a
+                    >
+                </li>
+                <li>
+                    <a href="ethical_response.html"
+                        ><span class="icon">&#9878;</span></a
+                    >
+                </li>
+                <li>
+                    <a href="genai_mt_acknowledgement.html"
+                        ><span class="icon">&#9776;</span></a
+                    >
+                </li>
+            </ul>
+        </nav>
+
+        <nav id="nav-desktop" aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">WP4 Home</a></li>
+                <li><a href="site_map.html">Site Map</a></li>
+                <li><a href="style_guide.html">Style Guide</a></li>
+                <li><a href="ethical_response.html">Ethical Response</a></li>
+                <li><a href="genai_mt_acknowledgement.html">GenAI</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="container">
+                <h1 class="m-y-5">Behavioural Design</h1>
+                <h3>
+                    This section of the Style Guide ensures users are supported
+                    through predictable interaction, usability, and feedback.
+                </h3>
+                <p>
+                    It includes UI behaviours such as hover states, form
+                    validation, button feedback, and accessible navigation — key
+                    elements in the behavioural level of design.
+                </p>
+
+                <article>
+                    <h2 class="m-t-3">Button Styles</h2>
+                    <p>
+                        Buttons follow consistent styling to signal
+                        interactivity. Hover, focus, and disabled states provide
+                        visual feedback.
+                    </p>
+                    <div class="button-example">
+                        <h3>Primary Button</h3>
+                        <button class="btn-primary">Join Now</button>
+                        <button class="btn-primary" disabled>Join Now</button>
+                        <p class="explanation">
+                            High-contrast primary action. Hover and pressed
+                            states provide feedback. Disabled style signals
+                            non-interactive state.
+                        </p>
+                    </div>
+                    <div class="button-example">
+                        <h3>Secondary Button</h3>
+                        <button class="btn-secondary">Learn More</button>
+                        <button class="btn-secondary" disabled>
+                            Learn More
+                        </button>
+                        <p class="explanation">
+                            Alternative action with subdued colours.
+                            Hover/pressed states reinforce usability without
+                            disrupting hierarchy.
+                        </p>
+                    </div>
+                    <div class="button-example">
+                        <h3>Icon Button</h3>
+                        <button class="btn-icon" aria-label="Search">🔍</button>
+                        <p class="explanation">
+                            Icon-only button with <code>aria-label</code> for
+                            screen reader support. Suitable for utility actions.
+                        </p>
+                    </div>
+                </article>
+
+                <article>
+                    <h2 class="m-t-3">Form Example</h2>
+                    <p>
+                        This form includes real-time validation and provides
+                        user feedback on both field errors and submission
+                        status.
+                    </p>
+                    <form id="community-form" enctype="multipart/form-data">
+                        <label for="name"><p>Full Name</p></label>
+                        <input type="text" id="name" name="name" required />
+
+                        <label for="email"><p>Email</p></label>
+                        <input type="email" id="email" name="email" required />
+
+                        <label for="message"><p>Message (optional)</p></label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="4"
+                            placeholder="Optional introduction..."
+                        ></textarea>
+
+                        <label for="photo"
+                            ><p>Upload a Photo (optional)</p></label
+                        >
+                        <input
+                            type="file"
+                            id="photo"
+                            name="photo"
+                            accept="image/*"
+                        />
+
+                        <button type="submit" class="btn btn-primary m-t-2">
+                            Join the Community
+                        </button>
+                    </form>
+                    <p id="form-feedback" class="m-t-3" aria-live="polite"></p>
+                </article>
+
+                <article>
+                    <h2 class="m-t-3">Navigation and Feedback</h2>
+                    <p>
+                        Navigation menus use visual hierarchy and semantic HTML
+                        to support clarity. Menus highlight the active page, and
+                        feedback is offered via focus indicators and hover
+                        transitions.
+                    </p>
+                </article>
+
+                <article>
+                    <h2 class="m-t-3">Micro-Interactions</h2>
+                    <p>
+                        Hover effects on buttons and images give users cues
+                        about interactivity. These small interactions build
+                        trust and improve usability.
+                    </p>
+                </article>
+
+                <article>
+                    <h2>Accessibility Principles</h2>
+                    <ul>
+                        <li>
+                            All text meets minimum WCAG 2.2 contrast guidelines.
+                        </li>
+                        <li>
+                            Navigation is keyboard accessible, and buttons are
+                            clearly labeled.
+                        </li>
+                        <li>
+                            Images contain meaningful alt text and avoid
+                            decorative clutter.
+                        </li>
+                        <li>
+                            Forms include validation feedback and labels to
+                            support screen readers.
+                        </li>
+                    </ul>
+                </article>
+            </div>
+        </main>
+
+        <script type="module" src="js/behavioural_design.js"></script>
+    </body>
+</html>

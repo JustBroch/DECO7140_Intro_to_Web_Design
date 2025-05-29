@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- CSS Linking -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/page_css/visceral_design.css" />
+        <link rel="stylesheet" href="css/component_skeletons/gallery.css" />
+        <link rel="stylesheet" href="css/component_skeletons/viewer.css" />
+
+        <link rel="icon" type="image/png" href="assets/16.png" />
+
+        <title>Work Phase 3</title>
+    </head>
+    <body>
+        <nav id="nav-mobile" aria-label="Main Navigation">
+            <ul>
+                <li>
+                    <a href="index.html"><span class="icon">&#8962;</span></a>
+                </li>
+                <li>
+                    <a href="site_map.html"
+                        ><span class="icon">&#9873;</span></a
+                    >
+                </li>
+                <li>
+                    <a href="style_guide.html"
+                        ><span class="icon">&#9733;</span></a
+                    >
+                </li>
+                <li>
+                    <a href="ethical_response.html"
+                        ><span class="icon">&#9878;</span></a
+                    >
+                </li>
+                <li>
+                    <a href="genai_mt_acknowledgement.html"
+                        ><span class="icon">&#9776;</span></a
+                    >
+                </li>
+            </ul>
+        </nav>
+
+        <nav id="nav-desktop" aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">WP4 Home</a></li>
+                <li><a href="site_map.html">Site Map</a></li>
+                <li><a href="style_guide.html">Style Guide</a></li>
+                <li><a href="ethical_response.html">Ethical Response</a></li>
+                <li><a href="genai_mt_acknowledgement.html">GenAI</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="container">
+                <h1 class="m-y-5">Visceral Design</h1>
+                <h3>
+                    The focus of this section of the Style Guide is ensuring the
+                    user has a good first impression of the site.
+                </h3>
+                <p>
+                    This page explores how the site’s visual design creates an
+                    immediate emotional impression through colours, typography,
+                    and layout.
+                </p>
+
+                <article>
+                    <h2 class="m-t-3">Page Layouts</h2>
+                    <p>
+                        Below are low-fidelity wireframes for key pages
+                        (Homepage, Content Page, and Interactive Page). These
+                        layouts prioritize clear hierarchy, prototypicality, and
+                        mobile-first responsiveness.
+                    </p>
+                    <section class="gallery m-t-3">
+                        <img
+                            src="assets/wireframe_mobile.png"
+                            alt="Mobile homepage wireframe: Clear structure, call-to-action first, visual hierarchy supports rapid scanning."
+                            class="responsive-img"
+                        />
+                        <img
+                            src="assets/wireframe_desktop.png"
+                            alt="Desktop homepage wireframe: Balanced layout with consistent header and featured sections."
+                            class="responsive-img"
+                        />
+                    </section>
+                    <aside class="viewer" id="viewer" aria-hidden="true">
+                        <button
+                            id="close-viewer"
+                            aria-label="Close image viewer"
+                        >
+                            ✖
+                        </button>
+                        <img id="viewer-img" src="" alt="" />
+                        <p id="viewer-caption"></p>
+                    </aside>
+                </article>
+
+                <article>
+                    <h2 class="m-t-3">Colour Scheme</h2>
+                    <div class="color-grid">
+                        <div
+                            class="color-box"
+                            style="background-color: #f3eeea"
+                        >
+                            Background<br />#F3EEEA
+                        </div>
+                        <div
+                            class="color-box"
+                            style="background-color: #ebe3d5"
+                        >
+                            Secondary<br />#EBE3D5
+                        </div>
+                        <div
+                            class="color-box"
+                            style="background-color: #b0a695; color: white"
+                        >
+                            Primary<br />#B0A695
+                        </div>
+                        <div
+                            class="color-box"
+                            style="background-color: #776b5d; color: white"
+                        >
+                            Accent<br />#776B5D
+                        </div>
+                    </div>
+                    <br />
+                    <p>
+                        The colour palette was selected to evoke warmth,
+                        calmness, and clarity. Contrast ratios have been tested
+                        to ensure legibility and WCAG AA compliance.
+                    </p>
+                </article>
+
+                <article>
+                    <h2 class="m-t-3">Typography</h2>
+                    <ul>
+                        <li>
+                            <strong>Headings (h1–h2):</strong> Font: 'Roboto',
+                            sans-serif – 2rem/700, clear hierarchy.
+                        </li>
+                        <li>
+                            <strong>Body text:</strong> Font: 'Roboto',
+                            sans-serif – 1rem/400, optimized for readability.
+                        </li>
+                        <li>
+                            <strong>Captions:</strong> 0.875rem/300, subtle
+                            guidance for assistive clarity.
+                        </li>
+                    </ul>
+                    <p>
+                        Typography is chosen for high readability and visual
+                        consistency. Headings establish clear hierarchy, and
+                        generous line-height aids scanning.
+                    </p>
+                </article>
+            </div>
+        </main>
+
+        <script type="module" src="js/visceral_design.js"></script>
+    </body>
+</html>
