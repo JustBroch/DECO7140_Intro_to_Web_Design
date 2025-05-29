@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Condensed+One&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* CSS Variables to Define Colour Scheme */
+:root {
+    --background-color: #f3eeea;
+    --primary-color: #c5cdc7;
+    --secondary-color: #ebe3d5;
+    --accent-color: #b0a695;
+    --text-color: #000;
+}
+
+section > * + * {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+h1 {
+    font-size: 4.2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+h3 {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+h4 {
+    font-size: 1rem;
+    color: var(--secondary-color);
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+h5 {
+    font-size: 0.75rem;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+ul,
+li {
+    font-size: 1rem;
+    line-height: 1.6;
+}

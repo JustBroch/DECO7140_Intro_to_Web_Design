@@ -1,0 +1,62 @@
+@import "../css/component_skeletons/card.css";
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.card {
+    background-color: var(--background-color);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.card p {
+    flex-grow: 1;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.card button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.card button a {
+    color: white;
+    text-decoration: none;
+}
+
+/* site_map.css */
+@media (min-width: 768px) {
+    .card {
+        width: calc(
+            33.33% - 14px
+        ); /* Approximately 3 cards per row with gap considered */
+        margin-bottom: 20px; /* Add bottom margin for wrapped rows */
+    }
+}

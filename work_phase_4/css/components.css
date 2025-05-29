@@ -1,0 +1,96 @@
+@import "./component_skeletons/accordion.css";
+
+/* MENUS */
+/* Base styles */
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Responsive control */
+/* Media query should be below here */
+
+#nav-mobile {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    background-color: var(--secondary-color);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#nav-mobile ul li a {
+    display: block;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    text-decoration: none;
+    z-index: 1000;
+}
+
+#nav-desktop {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    background-color: var(--secondary-color);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000;
+}
+
+#nav-desktop ul li a {
+    display: block;
+    padding: 1rem 0;
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+#nav-desktop ul li a:hover {
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.responsive-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1rem auto;
+}
+
+/* MENUS */
+/* Responsive control */
+
+@media screen and (max-width: 767px) {
+    .container {
+        padding-bottom: 70px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #nav-desktop {
+        display: block;
+    }
+
+    #nav-mobile {
+        display: none;
+    }
+}
+
+/* -- reusable container for cards -- */
+.card-container {
+    display: flex;
+    flex-direction: column; /* mobile first: vertically */
+    gap: 1rem; /* distance between cards */
+    padding: 1rem;
+}
+
+@media (min-width: 768px) {
+    .card-container {
+        flex-direction: row; /* on desktop: rows */
+        flex-wrap: wrap; /* if full -> new row */
+    }
+}

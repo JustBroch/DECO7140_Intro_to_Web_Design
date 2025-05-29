@@ -1,0 +1,10 @@
+/* -- card skeleton: neutral style -- */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: none;
+    transition: none;
+    box-sizing: border-box;
+}
