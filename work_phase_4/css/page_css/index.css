@@ -7,6 +7,26 @@
     margin-top: 3rem;
 }
 
+.hero-section {
+    background-image: url('../../assets/connecting_people.jpg'); 
+    background-size: cover; /* Dekker hele elementet */
+    background-position: center; /* Sentrerer bildet */
+    background-repeat: no-repeat; /* Hindrer repetisjon */
+
+    /* Bestem høyden på seksjonen */
+    min-height: 80vh; /* Dekker 80% av viewport høyde, juster til 100vh for full skjermhøyde */
+    height: auto; /* Lar innholdet dytte høyden om nødvendig */
+
+    display: flex; /* Bruker Flexbox for sentrering av innhold */
+    justify-content: center; /* Sentrerer horisontalt */
+    align-items: center; /* Sentrerer vertikalt */
+    text-align: center; /* Sentrerer tekst inni */
+    color: white; /* Tekstfarge over bildet */
+    position: relative; /* Nødvendig for overlay */
+    padding: 2rem; /* Legg til litt polstring */
+    box-sizing: border-box; /* Inkluderer polstring i bredde/høyde */
+}
+
 .card {
     background-color: var(--background-color);
     border-radius: 16px;

@@ -35,13 +35,8 @@
                     >
                 </li>
                 <li>
-                    <a href="ethical_response.html"
+                    <a href="create_post.html"
                         ><span class="icon">&#9878;</span></a
-                    >
-                </li>
-                <li>
-                    <a href="genai_mt_acknowledgement.html"
-                        ><span class="icon">&#9776;</span></a
                     >
                 </li>
             </ul>
@@ -49,6 +44,9 @@
 
         <nav id="nav-desktop" aria-label="Main Navigation">
             <ul>
+                <li>
+                    <a href="index.html">LoopedIn</a>
+                </li>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li>
@@ -56,8 +54,7 @@
                         >Community Feed</a
                     >
                 </li>
-                <li><a href="ethical_response.html">Ethical Response</a></li>
-                <li><a href="genai_mt_acknowledgement.html">GenAI</a></li>
+                <li><a href="create_post.html">Create Post</a></li>
             </ul>
         </nav>
 
@@ -67,36 +64,83 @@
 
                 <section class="card-container m-y-5">
                     <div class="card">
-                        <h3>Visceral Design</h3>
-                        <p>
-                            How our design makes an immediate emotional impact.
-                        </p>
+                        <h3>Create Post</h3>
+                        <p>What's on your mind?</p>
                         <button>
-                            <a href="visceral_design.html">Learn more</a>
-                        </button>
-                    </div>
-                    <div class="card">
-                        <h3>Behavioural Design</h3>
-                        <p>
-                            How interaction and usability guide user behaviour.
-                        </p>
-                        <button>
-                            <a href="behavioural_design.html">Learn more</a>
-                        </button>
-                    </div>
-                    <div class="card">
-                        <h3>Reflective Design</h3>
-                        <p>
-                            How the design supports long-term user values and
-                            identity.
-                        </p>
-                        <button>
-                            <a href="reflective_design.html">Learn more</a>
+                            <a href="create_post.html">Create Post</a>
                         </button>
                     </div>
                 </section>
+                <section class="card-container m-y-5">
+                    <div class="card">
+                        <article class="feed-post">
+                            <div class="post-header">
+                                <img
+                                    src="assets/business_woman.png"
+                                    alt="Profile picture for Emma Kristiansen"
+                                    class="post-avatar"
+                                />
+                                <div class="post-user-info">
+                                    <a
+                                        class="post-username"
+                                        >Emma Kristiansen</a
+                                    >
+                                    <span class="post-timestamp"
+                                        >5 hours ago</span
+                                    >
+                                </div>
+                            </div>
+                            <div class="post-content">
+                                <h3>
+                                    My Smart Garden Project: IoT-based Watering
+                                    & Monitoring
+                                </h3>
+                                <p>
+                                    Excited to share my latest project: an
+                                    IoT-based system for smart garden watering
+                                    and plant monitoring! It uses a Raspberry
+                                    Pi, various sensors (humidity, temperature),
+                                    and a mobile app to remotely control
+                                    watering and get real-time data on plant
+                                    health. The code is on GitHub – take a look!
+                                    <a
+                                        href="post_detail_emma.html"
+                                        class="read-more"
+                                        >Read more</a
+                                    >
+                                </p>
+                                <img
+                                    src="assets/smart_garden_project.jpg"
+                                    alt="Illustration of a smart garden project with IoT"
+                                    class="post-image"
+                                />
+                            </div>
+                            <div class="post-actions">
+                                <span class="action-item"
+                                    ><span class="icon" aria-hidden="true"
+                                        >&hearts;</span
+                                    >
+                                    67</span
+                                >
+                                <span class="action-item"
+                                    ><span class="icon" aria-hidden="true"
+                                        >&#128172;</span
+                                    >
+                                    23</span
+                                >
+                                <a href="#" class="action-button">Like</a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <article>
+                    <section id="community-list" class="m-t-5">
+                        <!-- Community cards dynamically populated here -->
+                    </section>
+                </article>
             </div>
         </main>
-        <script type="module" src="js/style_guide.js"></script>
+        <script type="module" src="js/reflective_design.js"></script>
     </body>
 </html>
