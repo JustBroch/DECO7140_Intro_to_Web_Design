@@ -1,4 +1,5 @@
 @import "./component_skeletons/accordion.css";
+@import "base.css";
 
 /* MENUS */
 /* Base styles */
@@ -34,7 +35,7 @@ nav ul {
     position: fixed;
     top: 0;
     width: 100vw;
-    background-color: var(--secondary-color);
+    background-color: var(--background-color);
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
     display: none;
     z-index: 1000;
@@ -82,7 +83,7 @@ nav ul {
 
 /* -- reusable container for cards -- */
 .card-container {
-    display: flex;
+    display: grid;
     flex-direction: column; /* mobile first: vertically */
     gap: 1rem; /* distance between cards */
     padding: 1rem;
@@ -92,6 +93,167 @@ nav ul {
     .card-container {
         flex-direction: row; /* on desktop: rows */
         flex-wrap: wrap; /* if full -> new row */
+    }
+}
+
+/* --- Styles for forms --- */
+
+/* Generell styling for alle form-grupper for å stable label og input/select/textarea */
+.form-group {
+    display: flex;
+    flex-direction: column; /* Stabler elementene vertikalt */
+    margin-bottom: 1rem; /* Mellomrom mellom hver form-gruppe */
+}
+
+/* Stil for alle input-felt, textarea og select */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="url"],
+.form-group select,
+.form-group textarea {
+    padding: 0.75rem; /* Mindre padding for en slankere look */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font: inherit; /* Arver font fra body */
+    width: 100%; /* Tar hele bredden av sin forelder */
+    box-sizing: border-box; /* Viktig for å inkludere padding i bredden */
+    margin-top: 0.25rem; /* Lite mellomrom mellom label og felt */
+}
+
+/* Stil for når feltet er i fokus */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none; /* Fjerner standard nettleser-outline */
+    border-color: var(--primary); /* Bruker din primærfarge for fokus */
+    box-shadow: 0 0 0 2px rgba(var(--primary-rgb, 30, 64, 175), 0.2); /* Lett skygge for fokus */
+}
+
+/* Stil for labels */
+.form-group label {
+    font-weight: bold; /* Fet skrift for etiketter */
+    margin-bottom: 0.25rem; /* Litt avstand under label */
+    font-size: 0.95rem; /* Litt mindre fontstørrelse */
+    color: var(--text-color, #333); /* Bruker din tekstfarge */
+}
+
+/* Stil for den røde stjernen for obligatoriske felt */
+.required-star {
+    color: var(--accent); /* Bruker din aksentfarge (rød) */
+    margin-left: 0.25rem;
+}
+
+/* Stil for selve form-containeren (post-form-card) */
+.post-form-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem; /* Litt mer padding for at formen skal puste */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* En lett skygge for å skille den ut */
+    margin-top: 2rem; /* Avstand fra overliggende innhold */
+}
+
+/* Stil for beskrivelse under H2 i form-card */
+.form-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+/* Stil for "Publish Post" knappen - juster til din egen knapp-stil */
+.button.primary-button {
+    background-color: var(--primary); /* Bruker din primærfarge */
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    align-self: flex-start; /* Justerer knappen til venstre hvis formen er flex-kolonne */
+}
+
+.button.primary-button:hover {
+    background-color: #007bff;
+}
+
+/* --- News cards styling --- */
+.news-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden; /* Veldig viktig for at bilder ikke stikker ut */
+    display: flex;
+    flex-direction: column;
+    /* Jonas hadde width: 400px; her. Vi vil gjøre den mer responsiv */
+    /* max-width: 400px; /* Kan brukes hvis du vil ha en maksimal bredde per kort */
+}
+
+.news-image {
+    width: 100%;
+    height: 200px; /* Fast høyde for bildet */
+    object-fit: cover; /* Sørger for at bildet fyller plassen uten å strekkes */
+    border-bottom: 1px solid #ccc;
+}
+
+.news-content {
+    padding: 1rem;
+    display: flex; /* Gjør innholdet til en flex-container for å kontrollere Read more-knappen */
+    flex-direction: column;
+    flex-grow: 1; /* Sørger for at innholdet fyller vertikal plass */
+}
+
+.news-content h3 {
+    margin-top: 0.5rem; /* Juster ved behov */
+    margin-bottom: 0.5rem; /* Juster ved behov */
+}
+
+.news-content p {
+    margin-bottom: 1rem; /* Juster ved behov */
+}
+
+.news-author {
+    font-size: 0.8rem;
+    color: #999;
+    margin-top: 1rem; /* Avstand over forfatternavn */
+    margin-bottom: 1rem;
+}
+
+.news-link {
+    color: var(--primary); /* Bruker din primærfarge */
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: auto; /* Dytter "Read more" lenken til bunnen av nyhetsinnholdet */
+}
+
+/* --- Nyhetside Layout --- */
+.news-grid-container {
+    display: grid;
+    /* Standard for mobil: 1 kolonne. auto-fit tilpasser antall kolonner */
+    /* minmax(280px, 1fr) sikrer at kortene er minst 280px brede og fyller resten */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 1.5rem; /* Mellomrom mellom kortene (juster ved behov) */
+    padding: 1rem; /* Padding for selve containeren */
+}
+
+@media (min-width: 768px) {
+    /* Ved 768px bredde eller mer (f.eks. nettbrett) */
+    .news-grid-container {
+        grid-template-columns: repeat(2, 1fr); /* To kolonner */
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Ved 1024px bredde eller mer (f.eks. desktop) */
+    .news-grid-container {
+        grid-template-columns: repeat(3, 1fr); /* Tre kolonner */
+    }
+}
+
+/* Valgfritt: For veldig store skjermer, 4 kolonner */
+@media (min-width: 1300px) {
+    .news-grid-container {
+        grid-template-columns: repeat(4, 1fr); /* Fire kolonner */
     }
 }
 
