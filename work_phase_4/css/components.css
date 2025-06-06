@@ -258,6 +258,66 @@ nav ul {
     }
 }
 
+/* --- CTA Cards styling --- */
+.cta-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cta-card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ccc;
+}
+
+.cta-card .card-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.cta-card .card-content h3 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.cta-card .card-content p {
+    flex-grow: 1;
+    margin-bottom: 1rem;
+}
+
+.cta-card .card-content .button {
+    align-self: flex-start;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.cta-card .card-content .button:hover {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+
 /* Footer */
 .site-footer {
     background-color: var(--accent-color);

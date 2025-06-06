@@ -65,61 +65,21 @@
         </nav>
         <main>
             <div class="container">
-                <h1 class="m-y-5">Share Your Thoughts</h1>
+                <h1 class="m-y-5">Join the Community</h1>
                 <h3>
-                    Do you have a project, an idea, a question, or news to
-                    share?
+                    Introduce yourself and connect with fellow innovators on
+                    LoopedIn. Your message and profile will appear in the
+                    Community Feed.
                 </h3>
 
                 <article class="post-form-card">
-                    <h2>Create a New Post</h2>
+                    <h2>Join the Community</h2>
                     <p class="form-description">
-                        Fill out the form below to share your thoughts, ideas,
-                        or experiences with the community.
+                        Fill out the form below to introduce yourself to the
+                        LoopedIn community. Your message will appear in the
+                        Community Feed.
                     </p>
-                    <form
-                        id="community-post-form"
-                        enctype="multipart/form-data"
-                    >
-                        <div class="form-group">
-                            <label for="post-type"
-                                >Post Type<span class="required-star"
-                                    >*</span
-                                ></label
-                            >
-                            <select id="post-type" name="post-type" required>
-                                <option value="" disabled selected>
-                                    Select post type
-                                </option>
-                                <option value="project">
-                                    Project Showcase
-                                </option>
-                                <option value="question">
-                                    Question & Discussion
-                                </option>
-                                <option value="article">
-                                    Article / Tutorial
-                                </option>
-                                <option value="event">Event / News</option>
-                                <option value="general">General</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="post-title"
-                                >Post Title<span class="required-star"
-                                    >*</span
-                                ></label
-                            >
-                            <input
-                                type="text"
-                                id="post-title"
-                                name="post-title"
-                                required
-                                placeholder="E.g., 'Building a Smart Garden with IoT'"
-                            />
-                        </div>
-
+                    <form id="community-form" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="name"
                                 >Your Full Name<span class="required-star"
@@ -151,42 +111,15 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="content"
-                                >Post Content<span class="required-star"
-                                    >*</span
-                                ></label
+                            <label for="message"
+                                >Your Message to the Community</label
                             >
                             <textarea
-                                id="content"
-                                name="content"
+                                id="message"
+                                name="message"
                                 rows="8"
-                                placeholder="Write your post here. Describe your project, ask your question, or share your article..."
-                                required
+                                placeholder="Write a short introduction or share your thoughts..."
                             ></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="tags"
-                                >Tags / Keywords (comma-separated)</label
-                            >
-                            <input
-                                type="text"
-                                id="tags"
-                                name="tags"
-                                placeholder="E.g., IoT, AI, Python, frontend"
-                            />
-                        </div>
-
-                        <div class="form-group">
-                            <label for="related-link"
-                                >Related Link (optional)</label
-                            >
-                            <input
-                                type="url"
-                                id="related-link"
-                                name="related-link"
-                                placeholder="E.g., https://github.com/yourproject"
-                            />
                         </div>
 
                         <div class="form-group">
@@ -203,7 +136,7 @@
                             type="submit"
                             class="button primary-button m-t-2"
                         >
-                            Publish Post
+                            Join Community
                         </button>
                     </form>
                     <p id="form-feedback" class="m-t-3" aria-live="polite"></p>

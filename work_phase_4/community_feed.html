@@ -10,28 +10,24 @@
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
         <link rel="stylesheet" href="css/page_css/community_feed.css" />
-        <link rel="stylesheet" href="js/create_post.js" />
-        <link rel="stylesheet" href="css/component_skeletons/gallery.css" />
-        <link rel="stylesheet" href="css/component_skeletons/viewer.css" />
         <link rel="stylesheet" href="css/component_skeletons/card.css" />
 
         <link rel="icon" type="image/png" href="assets/16.png" />
 
-        <title>Work Phase 4</title>
+        <title>Community Feed - LoopedIn</title>
     </head>
     <body>
+        <!-- NAVIGATION -->
         <nav id="nav-mobile" aria-label="Main Navigation">
             <ul>
                 <li>
                     <a href="index.html"><span class="icon">&#8962;</span></a>
                 </li>
                 <li>
-                    <a href="site_map.html"
-                        ><span class="icon">&#9873;</span></a
-                    >
+                    <a href="about.html"><span class="icon">&#9873;</span></a>
                 </li>
                 <li>
-                    <a href="style_guide.html" aria-current="page"
+                    <a href="community_feed.html" aria-current="page"
                         ><span class="icon">&#9733;</span></a
                     >
                 </li>
@@ -46,13 +42,13 @@
         <nav id="nav-desktop" aria-label="Main Navigation">
             <ul>
                 <li>
-                    <a href="index.html" aria-current="page"
-                        ><img
+                    <a href="index.html" aria-current="page">
+                        <img
                             src="assets/loop.svg"
                             alt="LoopIn Icon"
                             style="vertical-align: middle; margin-right: 5px"
-                        />LoopedIn</a
-                    >
+                        />LoopedIn
+                    </a>
                 </li>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -65,20 +61,33 @@
             </ul>
         </nav>
 
+        <!-- MAIN CONTENT -->
         <main>
             <div class="container">
-                <h1>Community Feed</h1>
+                <h1 class="m-y-5">Community Feed</h1>
 
-                <section class="card-container m-y-5">
-                    <div class="card">
-                        <h3>Create Post</h3>
-                        <p>What's on your mind?</p>
-                        <button>
-                            <a href="create_post.html">Create Post</a>
-                        </button>
+                <!-- CTA SECTION -->
+                <article class="card cta-card m-y-5">
+                    <img
+                        src="assets/community.jpg"
+                        alt="Abstract tech network illustration"
+                        class="cta-card-image"
+                        loading="lazy"
+                    />
+                    <div class="card-content">
+                        <h3>Join the Community</h3>
+                        <p>
+                            Introduce yourself and connect with fellow
+                            innovators! Share your passion and become part of
+                            our growing tech community.
+                        </p>
+                        <a href="create_post.html" class="button">Join Now</a>
                     </div>
-                </section>
+                </article>
+
+                <!-- FEED SECTION -->
                 <section class="card-container m-y-5">
+                    <!-- Example post 1 -->
                     <div class="card">
                         <article class="feed-post">
                             <div class="post-header">
@@ -88,56 +97,24 @@
                                     class="post-avatar"
                                 />
                                 <div class="post-user-info">
-                                    <a class="post-username"
-                                        >Emma Kristiansen</a
+                                    <h3 class="post-username"
+                                        >Emma Kristiansen</h3
                                     >
-                                    <span class="post-timestamp"
-                                        >5 hours ago</span
-                                    >
+
                                 </div>
                             </div>
                             <div class="post-content">
-                                <h3>
-                                    My Smart Garden Project: IoT-based Watering
-                                    & Monitoring
-                                </h3>
                                 <p>
-                                    Excited to share my latest project: an
-                                    IoT-based system for smart garden watering
-                                    and plant monitoring! It uses a Raspberry
-                                    Pi, various sensors (humidity, temperature),
-                                    and a mobile app to remotely control
-                                    watering and get real-time data on plant
-                                    health. The code is on GitHub – take a look!
-                                    <a
-                                        href="post_detail_emma.html"
-                                        class="read-more"
-                                        >Read more</a
-                                    >
+                                    Hi everyone! I'm passionate about IoT and
+                                    smart gardening. Looking forward to
+                                    connecting and learning from this great
+                                    community!
                                 </p>
-                                <img
-                                    src="assets/smart_garden_project.jpg"
-                                    alt="Illustration of a smart garden project with IoT"
-                                    class="post-image"
-                                />
-                            </div>
-                            <div class="post-actions">
-                                <span class="action-item"
-                                    ><span class="icon" aria-hidden="true"
-                                        >&hearts;</span
-                                    >
-                                    67</span
-                                >
-                                <span class="action-item"
-                                    ><span class="icon" aria-hidden="true"
-                                        >&#128172;</span
-                                    >
-                                    23</span
-                                >
-                                <a href="#" class="action-button">Like</a>
                             </div>
                         </article>
                     </div>
+
+                    <!-- Example post 2 -->
                     <div class="card">
                         <article class="feed-post">
                             <div class="post-header">
@@ -147,55 +124,22 @@
                                     class="post-avatar"
                                 />
                                 <div class="post-user-info">
-                                    <a class="post-username">Alex Jansen</a>
-                                    <span class="post-timestamp"
-                                        >1 day ago</span
-                                    >
+                                    <h3 class="post-username">Alex Jansen</h3>
+
                                 </div>
                             </div>
                             <div class="post-content">
-                                <h3>
-                                    Building a Custom Home Automation System
-                                    with ESP32
-                                </h3>
                                 <p>
-                                    Just finished phase 1 of my custom home
-                                    automation project! Using ESP32
-                                    microcontrollers and a central Home
-                                    Assistant server to control lights,
-                                    temperature, and security cameras. The
-                                    biggest challenge was integrating diverse
-                                    protocols. Happy to share my learnings!
-                                    <a
-                                        href="post_detail_alex.html"
-                                        class="read-more"
-                                        >Read more</a
-                                    >
+                                    Excited to explore the world of home
+                                    automation! Just started tinkering with
+                                    ESP32 boards and Home Assistant. Great to be
+                                    here!
                                 </p>
-                                <img
-                                    src="assets/home_automation_project.jpg"
-                                    alt="Illustration of a smart home automation system"
-                                    class="post-image"
-                                />
-                            </div>
-                            <div class="post-actions">
-                                <span class="action-item"
-                                    ><span class="icon" aria-hidden="true"
-                                        >&hearts;</span
-                                    >
-                                    89</span
-                                >
-                                <span class="action-item"
-                                    ><span class="icon" aria-hidden="true"
-                                        >&#128172;</span
-                                    >
-                                    31</span
-                                >
-                                <a href="#" class="action-button">Like</a>
                             </div>
                         </article>
                     </div>
 
+                    <!-- Example post 3 -->
                     <div class="card">
                         <article class="feed-post">
                             <div class="post-header">
@@ -205,63 +149,29 @@
                                     class="post-avatar"
                                 />
                                 <div class="post-user-info">
-                                    <a class="post-username">Maria Sanchez</a>
-                                    <span class="post-timestamp"
-                                        >2 days ago</span
-                                    >
+                                    <h3 class="post-username">Maria Sanchez</h3>
                                 </div>
                             </div>
                             <div class="post-content">
-                                <h3>
-                                    Exploring Generative AI for Creative Content
-                                    Generation
-                                </h3>
                                 <p>
-                                    Fascinated by the potential of Generative
-                                    AI! I've been experimenting with various
-                                    models to create unique text and image
-                                    content. The results are astounding, but
-                                    also raise important ethical questions about
-                                    originality. What are your thoughts on
-                                    AI-generated art?
-                                    <a
-                                        href="post_detail_maria.html"
-                                        class="read-more"
-                                        >Read more</a
-                                    >
+                                    Fascinated by generative AI and its
+                                    potential for creative industries! I'm
+                                    exploring new tools and would love to hear
+                                    what others are using.
                                 </p>
-                                <img
-                                    src="assets/ai_content_creation.jpg"
-                                    alt="Illustration of AI generating content"
-                                    class="post-image"
-                                />
-                            </div>
-                            <div class="post-actions">
-                                <span class="action-item"
-                                    ><span class="icon" aria-hidden="true"
-                                        >&hearts;</span
-                                    >
-                                    112</span
-                                >
-                                <span class="action-item"
-                                    ><span class="icon" aria-hidden="true"
-                                        >&#128172;</span
-                                    >
-                                    45</span
-                                >
-                                <a href="#" class="action-button">Like</a>
                             </div>
                         </article>
                     </div>
                 </section>
 
-                <article>
-                    <section id="community-list" class="m-t-5">
-                        <!-- Community cards dynamically populated here -->
-                    </section>
-                </article>
+                <!-- DYNAMIC COMMUNITY LIST FROM API -->
+                <section id="community-list" class="m-t-5">
+                    <!-- API content will be injected here -->
+                </section>
             </div>
         </main>
+
+        <!-- JS -->
         <script type="module" src="js/reflective_design.js"></script>
     </body>
 </html>

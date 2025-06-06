@@ -1,19 +1,221 @@
-<head>
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/layout.css" />
-    <link rel="stylesheet" href="css/components.css" />
-    <link rel="stylesheet" href="page_css/index.css" />
-    <!-- This is specific for the page -->
-</head>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<p>
-    A visual and textual map showing the structure of the website, how pages are
-    linked, and the user’s expected navigation flow across both mobile and
-    desktop.
-</p>
-<p>This is a draft of the site map.</p>
+        <!-- CSS Linking -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/page_css/index.css" />
+        <link rel="stylesheet" href="css/component_skeletons/card.css" />
 
-<img src="assets/draft.png" alt="draft site map" class="responsive-img" />
-<p>This is the site map for the website.</p>
-<img src="assets/Site_Map.png" alt="site map" class="responsive-img" />
+        <link rel="icon" type="image/png" href="assets/16.png" />
+
+        <title>Work Phase 4</title>
+    </head>
+    <body>
+        <nav id="nav-mobile" aria-label="Main Navigation">
+            <ul>
+                <li>
+                    <a href="index.html" aria-current="page"
+                        ><span class="icon">&#8962;</span></a
+                    >
+                </li>
+                <li>
+                    <a href="about.html"><span class="icon">&#9873;</span></a>
+                </li>
+                <li>
+                    <a href="community_feed.html"
+                        ><span class="icon">&#9733;</span></a
+                    >
+                </li>
+                <li>
+                    <a href="create_post.html"
+                        ><span class="icon">&#9878;</span></a
+                    >
+                </li>
+            </ul>
+        </nav>
+
+        <nav id="nav-desktop" aria-label="Main Navigation">
+            <ul>
+                <li>
+                    <a href="index.html" aria-current="page"
+                        ><img
+                            src="assets/loop.svg"
+                            alt="LoopIn Icon"
+                            style="vertical-align: middle; margin-right: 5px"
+                        />LoopedIn</a
+                    >
+                </li>
+                <li>
+                    <a href="index.html" aria-current="page">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="community_feed.html">Community Feed</a>
+                </li>
+                <li>
+                    <a href="news.html">News</a>
+                </li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="container">
+                <h1 class="m-y-5">Implementation Rationale</h1>
+
+                <section>
+                    <h2>Alignment with Client and User Needs</h2>
+                    <p>
+                        The website was developed to align with the goals of the
+                        Connect Communities Initiative (CCI), focusing on
+                        building a space for tech innovators to connect,
+                        collaborate, and share knowledge. The design addresses
+                        the user needs identified in the A3 Design Proposal,
+                        including clarity, accessibility, and ease of navigation
+                        for both newcomers and experienced professionals. The
+                        platform’s structure and features reflect the priorities
+                        outlined in the client brief, supporting engagement
+                        through a community feed, interactive post creation, and
+                        accessible content.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Accessibility and Ethical Considerations</h2>
+                    <p>
+                        Accessibility principles guided the entire development
+                        process, with WCAG 2.2 Level AA standards implemented
+                        across navigation, forms, and content presentation.
+                        Colour contrasts, semantic HTML, and keyboard navigation
+                        have been carefully integrated. Ethical considerations,
+                        including transparency, user privacy, and inclusivity,
+                        were informed by A2 Design Research findings and applied
+                        to the handling of user-generated content and overall
+                        site interactions.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Variations from A3 Design Proposal</h2>
+                    <p>
+                        Some adjustments were made during implementation to
+                        improve usability and technical feasibility. For
+                        example, the "News" section was introduced as a curated
+                        content area, enhancing engagement while remaining
+                        aligned with the original community-focused concept.
+                        Certain layout refinements were applied to improve
+                        responsiveness across devices. These changes remain
+                        consistent with the original design intent and user
+                        experience goals.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Challenges and Strategies</h2>
+                    <p>
+                        Key challenges included managing API integration for the
+                        community feed and ensuring consistent behaviour across
+                        different browsers and screen sizes. To address these,
+                        modular JavaScript was used to streamline data handling,
+                        and responsive CSS techniques were refined through
+                        iterative testing. Additionally, adjustments were made
+                        to button styling and form behaviour to maintain a clear
+                        and accessible user interface.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Accessibility Audit</h2>
+                    <p>
+                        An accessibility audit was performed using the IBM Equal
+                        Access Accessibility Checker. The audit confirmed
+                        compliance with WCAG 2.2 Level AA, with minor
+                        adjustments made to improve label association and
+                        contrast in certain areas. A screenshot of the audit
+                        results is provided below.
+                    </p>
+                    <!-- Example for including the audit screenshot -->
+                    <img
+                        src="assets/accessibility_audit_screenshot.png"
+                        alt="Accessibility Audit Screenshot"
+                        class="responsive-img"
+                    />
+                    <p>
+                        The audit process provided valuable feedback, ensuring
+                        that the final implementation delivers an inclusive
+                        experience across diverse user groups.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>GitHub Repository</h2>
+                    <p>
+                        The full source code for this project is available on
+                        GitHub at:
+                        <a
+                            href="https://github.com/YOUR_USERNAME/YOUR_REPOSITORY"
+                            target="_blank"
+                            >https://github.com/JustBrochUQ/deco7140_development-</a
+                        >
+                    </p>
+                </section>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-columns">
+                <div>
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="#">Browse Discussions</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Code of Conduct</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Legal</h4>
+                    <ul>
+                        <li>
+                            <a href="genai_mt_acknowledgement.html"
+                                >GenAI Acknowledgement</a
+                            >
+                        </li>
+                        <li>
+                            <a href="ethical_response.html">Ethical Response</a>
+                        </li>
+                        <li>
+                            <a href="implementation_rationale.html"
+                                >Implementation Rationale</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                © 2025 Just Broch. All rights reserved.
+            </div>
+        </footer>
+    </body>
+</html>

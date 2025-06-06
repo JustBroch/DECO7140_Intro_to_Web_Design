@@ -74,10 +74,26 @@
 /* site_map.css */
 @media (min-width: 768px) {
     .card {
-        width: calc(
-            33.33% - 14px
-        ); /* Approximately 3 cards per row with gap considered */
         margin-bottom: 20px; /* Add bottom margin for wrapped rows */
     }
 }
 
+.cta-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+
+@media (min-width: 768px) {
+    .cta-cards-grid {
+        grid-template-columns: repeat(2, 1fr); /* To kolonner på desktop */
+    }
+}
+
+@media (min-width: 1024px) {
+    .cta-cards-grid {
+        grid-template-columns: repeat(2, 1fr); /* Holder på 2 kolonner også på større skjermer (eller kan utvide til 3) */
+    }
+}
