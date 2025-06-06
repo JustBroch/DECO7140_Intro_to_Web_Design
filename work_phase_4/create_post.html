@@ -75,13 +75,19 @@
                 </h3>
 
                 <article class="post-form-card">
-                    <h2>Join the Community</h2>
-                    <p class="form-description">
+                    <h2 id="form-title">Join the Community</h2>
+                    <p class="form-description" id="form-description">
                         Fill out the form below to introduce yourself to the
                         LoopedIn community. Your message will appear in the
                         Community Feed.
                     </p>
-                    <form id="community-form" enctype="multipart/form-data">
+
+                    <form
+                        id="community-form"
+                        enctype="multipart/form-data"
+                        aria-labelledby="form-title"
+                        aria-describedby="form-description"
+                    >
                         <div class="form-group">
                             <label for="name"
                                 >Your Full Name<span class="required-star"
@@ -94,6 +100,7 @@
                                 name="name"
                                 required
                                 placeholder="E.g., John Doe"
+                                aria-required="true"
                             />
                         </div>
 
@@ -109,6 +116,7 @@
                                 name="email"
                                 required
                                 placeholder="E.g., john.doe@example.com"
+                                aria-required="true"
                             />
                         </div>
 
@@ -137,10 +145,12 @@
                         <button
                             type="submit"
                             class="button primary-button m-t-2"
+                            aria-label="Submit your community post"
                         >
                             Join Community
                         </button>
                     </form>
+
                     <p id="form-feedback" class="m-t-3" aria-live="polite"></p>
                 </article>
             </div>

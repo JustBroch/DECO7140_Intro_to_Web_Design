@@ -95,6 +95,18 @@ nav ul {
         display: none;
     }
 }
+/* Hide h1 for accessibility at Home page */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
 
 /* -- reusable container for cards -- */
 .card-container {
@@ -389,4 +401,127 @@ a.button {
     margin-top: var(--space-4);
     font-size: 0.9rem;
     color: #666;
+}
+
+/* === ACCESSIBILITY IMPROVEMENTS === */
+
+/* 1️⃣ Better contrast for footer */
+.site-footer {
+    background-color: var(--accent-color);
+    color: #fff; /* Ensure white text */
+    padding: var(--space-4) var(--space-3);
+    border-top: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.site-footer h4 {
+    font-size: 1.2rem;
+    margin-bottom: var(--space-2);
+    color: #fff;
+}
+
+.site-footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.site-footer a:hover {
+    font-weight: bold;
+    text-decoration: underline; /* Provide visual cue */
+}
+
+.site-footer .footer-bottom {
+    text-align: center;
+    margin-top: var(--space-4);
+    font-size: 0.9rem;
+    color: #ccc; /* Slightly lighter grey */
+}
+
+/* 2️⃣ Focus visible for ALL links and buttons */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--primary-color, #1e40af);
+    outline-offset: 2px;
+}
+
+/* 3️⃣ Underline on hover for links for color not only cue */
+a:hover {
+    text-decoration: underline;
+}
+
+/* 4️⃣ Safe CTA-card button hover */
+.cta-card .card-content .button:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* 5️⃣ Hero-section text background for contrast */
+.hero-section .hero-content {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent bg */
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    display: inline-block; /* shrink to content */
+}
+
+/* === END ACCESSIBILITY IMPROVEMENTS === */
+
+/* === ACCESSIBILITY FIXES === */
+
+/* Footer contrast fix */
+.site-footer {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+.site-footer h4 {
+    color: #fff;
+}
+
+.site-footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.site-footer a:hover,
+.site-footer a:focus {
+    font-weight: bold;
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+/* Navigation focus visible */
+#nav-desktop ul li a:focus,
+#nav-mobile ul li a:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* CTA card links — add outline */
+.cta-card-link:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 4px;
+}
+
+/* Hero-section: add background overlay for HC-mode */
+.hero-section {
+    background-image: url("../../assets/back.webp");
+    background-color: rgba(0, 0, 0, 0.5); /* fallback background */
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    color: white;
+    position: relative;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+/* CTA card links: accessible name fix — helper */
+.cta-card-link[aria-label] {
+    /* nothing needed visually — aria-label will fix screen reader mismatch */
 }

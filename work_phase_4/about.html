@@ -14,27 +14,36 @@
 
         <link rel="icon" type="image/png" href="assets/16.png" />
 
-        <title>Work Phase 4</title>
+        <title>About - LoopedIn</title>
     </head>
     <body>
+        <!-- NAVIGATION -->
         <nav id="nav-mobile" aria-label="Main Navigation">
             <ul>
                 <li>
-                    <a href="index.html" aria-current="page"
-                        ><span class="icon">&#8962;</span></a
+                    <a href="index.html"
+                        ><span class="icon">&#8962;</span>
+                        <span class="visually-hidden">Home</span></a
                     >
                 </li>
                 <li>
-                    <a href="about.html"><span class="icon">&#9873;</span></a>
+                    <a href="about.html" aria-current="page"
+                        ><span class="icon">&#9873;</span>
+                        <span class="visually-hidden">About</span></a
+                    >
                 </li>
                 <li>
                     <a href="community_feed.html"
-                        ><span class="icon">&#9733;</span></a
+                        ><span class="icon">&#9733;</span>
+                        <span class="visually-hidden">Community Feed</span></a
                     >
                 </li>
                 <li>
                     <a href="create_post.html"
-                        ><span class="icon">&#9878;</span></a
+                        ><span class="icon">&#9878;</span>
+                        <span class="visually-hidden"
+                            >Join the Community</span
+                        ></a
                     >
                 </li>
             </ul>
@@ -43,7 +52,7 @@
         <nav id="nav-desktop" aria-label="Main Navigation">
             <ul>
                 <li>
-                    <a href="index.html" aria-current="page">
+                    <a href="index.html">
                         <img
                             src="assets/loop.svg"
                             alt="LoopIn Icon"
@@ -52,24 +61,19 @@
                         LoopedIn
                     </a>
                 </li>
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="about.html" aria-current="page">About</a>
-                </li>
-                <li>
-                    <a href="community_feed.html">Community Feed</a>
-                </li>
-                <li>
-                    <a href="news.html">News</a>
-                </li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" aria-current="page">About</a></li>
+                <li><a href="community_feed.html">Community Feed</a></li>
+                <li><a href="news.html">News</a></li>
             </ul>
         </nav>
 
+        <!-- MAIN CONTENT -->
         <main>
             <div class="container">
-                <header><h1>About LoopedIn</h1></header>
+                <header>
+                    <h1>About LoopedIn</h1>
+                </header>
 
                 <section class="about-intro">
                     <h2>Our Journey: Connecting Tomorrow's Innovators</h2>
@@ -183,22 +187,30 @@
                     </p>
                 </section>
 
-                <section class="join-us-cta">
-                    <h2>Be Part of the Future!</h2>
+                <section class="join-us-cta" aria-labelledby="join-us-heading">
+                    <h2 id="join-us-heading">Be Part of the Future!</h2>
                     <p>
                         Are you ready to contribute, learn, and grow with a
                         network of passionate technologists?
                     </p>
+                    <!-- No button here, as per your instruction -->
                 </section>
             </div>
         </main>
 
+        <!-- FOOTER -->
         <footer class="site-footer">
             <div class="footer-columns">
                 <div>
                     <h4>Platform</h4>
                     <ul>
-                        <li><a href="about.html">About Us</a></li>
+                        <li>
+                            <a
+                                href="about.html"
+                                aria-label="Learn about the LoopedIn platform"
+                                >About Us</a
+                            >
+                        </li>
                         <li>
                             <a href="implementation_rationale.html"
                                 >Implementation Rationale</a
@@ -240,7 +252,7 @@
             </div>
         </footer>
 
-        <!-- Linking to External JavaScript -->
+        <!-- JS -->
         <script type="module" src="js/site_map.js"></script>
     </body>
 </html>

@@ -21,19 +21,27 @@
         <nav id="nav-mobile" aria-label="Main Navigation">
             <ul>
                 <li>
-                    <a href="index.html"><span class="icon">&#8962;</span></a>
+                    <a href="index.html" aria-current="page"
+                        ><span class="icon">&#8962;</span>
+                        <span class="visually-hidden">Home</span></a
+                    >
                 </li>
                 <li>
-                    <a href="about.html"><span class="icon">&#9873;</span></a>
+                    <a href="about.html"
+                        ><span class="icon">&#9873;</span>
+                        <span class="visually-hidden">About</span></a
+                    >
                 </li>
                 <li>
                     <a href="community_feed.html" aria-current="page"
-                        ><span class="icon">&#9733;</span></a
+                        ><span class="icon">&#9733;</span>
+                        <span class="visually-hidden">Community Feed</span></a
                     >
                 </li>
                 <li>
                     <a href="create_post.html"
-                        ><span class="icon">&#9878;</span></a
+                        ><span class="icon">&#9878;</span>
+                        <span class="visually-hidden">Join the Community</span></a
                     >
                 </li>
             </ul>
@@ -45,7 +53,7 @@
                     <a href="index.html" aria-current="page">
                         <img
                             src="assets/loop.svg"
-                            alt="LoopIn Icon"
+                            alt="LoopedIn Icon"
                             style="vertical-align: middle; margin-right: 5px"
                         />
                         LoopedIn
@@ -70,11 +78,13 @@
 
         <!-- MAIN CONTENT -->
         <main>
+            <h1 class="visually-hidden">LoopedIn Community Feed</h1>
+
             <div class="container">
-                <h1 class="m-y-5">Community Feed</h1>
+                <h2 class="m-y-5">Community Feed</h2>
 
                 <!-- CTA SECTION -->
-                <article class="card">
+                <article class="card" aria-labelledby="join-community-cta">
                     <img
                         src="assets/community.jpg"
                         alt="Abstract tech network illustration"
@@ -82,7 +92,7 @@
                         loading="lazy"
                     />
                     <div class="card-content">
-                        <h3>Join the Community</h3>
+                        <h3 id="join-community-cta">Join the Community</h3>
                         <p>
                             Introduce yourself and connect with fellow
                             innovators! Share your passion and become part of
@@ -95,7 +105,9 @@
                 </article>
 
                 <!-- FEED SECTION -->
-                <section class="card-container m-y-5">
+                <section class="card-container m-y-5" aria-labelledby="feed-section-heading">
+                    <h2 id="feed-section-heading" class="visually-hidden">Latest Community Posts</h2>
+
                     <!-- Example post 1 -->
                     <div class="card">
                         <article class="feed-post">
@@ -148,7 +160,8 @@
                 </section>
 
                 <!-- DYNAMIC COMMUNITY LIST FROM API -->
-                <section id="community-list" class="m-t-5">
+                <section id="community-list" class="m-t-5" aria-live="polite">
+                    <h2 class="visually-hidden">Latest Community Posts from API</h2>
                     <!-- API content will be injected here -->
                 </section>
             </div>
@@ -203,6 +216,6 @@
         </footer>
 
         <!-- JS -->
-        <script type="module" src="js/reflective_design.js"></script>
+        <script type="module" src="js/community_feed.js"></script>
     </body>
 </html>
