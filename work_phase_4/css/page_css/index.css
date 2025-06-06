@@ -8,7 +8,7 @@
 }
 
 .hero-section {
-    background-image: url('../../assets/connecting_people.jpg'); 
+    background-image: url('../../assets/back.webp'); 
     background-size: cover; /* Dekker hele elementet */
     background-position: center; /* Sentrerer bildet */
     background-repeat: no-repeat; /* Hindrer repetisjon */
@@ -20,7 +20,7 @@
     display: flex; /* Bruker Flexbox for sentrering av innhold */
     justify-content: center; /* Sentrerer horisontalt */
     align-items: center; /* Sentrerer vertikalt */
-    text-align: center; /* Sentrerer tekst inni */
+    text-align: left; /* Sentrerer tekst inni */
     color: white; /* Tekstfarge over bildet */
     position: relative; /* Nødvendig for overlay */
     padding: 2rem; /* Legg til litt polstring */

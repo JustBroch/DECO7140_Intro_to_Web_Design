@@ -193,6 +193,10 @@ nav ul {
     color: var(--text-color);
 }
 
+a.button {
+    text-decoration: none;
+}
+
 /* --- News cards styling --- */
 .news-card {
     background-color: white;
