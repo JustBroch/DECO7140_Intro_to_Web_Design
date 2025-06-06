@@ -20,12 +20,12 @@
         <nav id="nav-mobile" aria-label="Main Navigation">
             <ul>
                 <li>
-                    <a href="index.html"><span class="icon">&#8962;</span></a>
+                    <a href="index.html" aria-current="page"
+                        ><span class="icon">&#8962;</span></a
+                    >
                 </li>
                 <li>
-                    <a href="about.html" aria-current="page"
-                        ><span class="icon">&#9873;</span></a
-                    >
+                    <a href="about.html"><span class="icon">&#9873;</span></a>
                 </li>
                 <li>
                     <a href="community_feed.html"
@@ -43,13 +43,14 @@
         <nav id="nav-desktop" aria-label="Main Navigation">
             <ul>
                 <li>
-                    <a href="index.html" aria-current="page"
-                        ><img
+                    <a href="index.html" aria-current="page">
+                        <img
                             src="assets/loop.svg"
                             alt="LoopIn Icon"
                             style="vertical-align: middle; margin-right: 5px"
-                        />LoopedIn</a
-                    >
+                        />
+                        LoopedIn
+                    </a>
                 </li>
                 <li>
                     <a href="index.html">Home</a>
@@ -61,7 +62,7 @@
                     <a href="community_feed.html">Community Feed</a>
                 </li>
                 <li>
-                    <a href="create_post.html">Create Post</a>
+                    <a href="news.html">News</a>
                 </li>
             </ul>
         </nav>
@@ -229,79 +230,59 @@
                                 <span style="color: var(--accent2-color)">
                                 </span>
                             </p>
-
-                            <!-- Nested Accordion for Sub-pages -->
-                            <div class="accordion nested">
-                                <div class="accordion-item">
-                                    <button class="accordion-header">
-                                        ▹▷ Easy access to website features
-                                    </button>
-                                    <div class="accordion-content">
-                                        <p class="m-y-3">
-                                            The website is designed to be
-                                            user-friendly and easy to navigate.
-                                            It provides quick access to all the
-                                            features and functionalities of the
-                                            platform. The user story is "As a
-                                            user, I want to easily access all
-                                            the features of the website from the
-                                            get go."
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                
-
-                <section class="accordion m-y-3">
-                    <div class="accordion-item">
-                        <button class="accordion-header">▷ Search</button>
-                        <div class="accordion-content">
-                            <p>
-                                A page for user profiles, private messaging, and
-                                interest-based networking.
-                                <br /><br />
-                                <strong>Features:</strong> Searchable profiles,
-                                tags for interests, contact buttons.
-                                <br />
-                                <strong>User/client support:</strong> Supports
-                                community growth and collaboration. Matches user
-                                story: “As a user, I want to connect with others
-                                in my field.”
-                                <br />
-                                <strong>Accessibility:</strong> Clear labels,
-                                ARIA roles for form fields, logical tab order.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <button class="accordion-header">▷ Events</button>
-                        <div class="accordion-content">
-                            <p>
-                                A page for upcoming community events, with
-                                filters and RSVP options.
-                                <br /><br />
-                                <strong>Features:</strong> Event calendar, RSVP
-                                buttons.
-                                <br />
-                                <strong>User/client support:</strong> Promotes
-                                engagement and attendance. Aligns with user
-                                story: “As a user, I want to find events related
-                                to my interests.”
-                                <br />
-                                <strong>Accessibility:</strong> High-contrast
-                                links, date formats for screen readers,
-                                mobile-friendly calendar layout.
-                            </p>
                         </div>
                     </div>
                 </section>
             </div>
         </main>
+
+        <footer class="site-footer">
+            <div class="footer-columns">
+                <div>
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li>
+                            <a href="implementation_rationale.html"
+                                >Implementation Rationale</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Community</h4>
+                    <ul>
+                        <li>
+                            <a href="community_feed.html">Community Feed</a>
+                        </li>
+                        <li>
+                            <a href="create_post.html">Join the Community</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="news.html">Tech News</a></li>
+                        <li>
+                            <a href="ethical_response.html">Ethical Response</a>
+                        </li>
+                        <li>
+                            <a href="genai_mt_acknowledgement.html"
+                                >GenAI Acknowledgement</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                © 2025 Just Broch. All rights reserved.
+            </div>
+        </footer>
+
         <!-- Linking to External JavaScript -->
         <script type="module" src="js/site_map.js"></script>
     </body>

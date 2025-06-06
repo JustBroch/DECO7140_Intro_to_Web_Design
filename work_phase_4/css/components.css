@@ -55,6 +55,21 @@ nav ul {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+#nav-desktop ul {
+    max-width: 1200px; /* <--- Nytt: begrens bredden */
+    margin: 0 auto; /* <--- Nytt: sentrer innhold */
+    padding: 0 2rem; /* <--- Nytt: litt padding fra kantene */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+
+#nav-desktop ul li:first-child {
+    margin-right: auto; /* Skyver resten mot høyre */
+}
+
 .responsive-img {
     display: block;
     max-width: 100%;
@@ -317,6 +332,11 @@ nav ul {
     color: var(--text-color);
 }
 
+.cta-card-link {
+    text-decoration: none; /* Fjern underline fra link */
+    color: inherit; /* Bruk samme tekstfarge som vanlig */
+    display: block; /* Så hele kortet er klikkbart */
+}
 
 /* Footer */
 .site-footer {
