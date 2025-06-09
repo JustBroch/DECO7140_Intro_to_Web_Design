@@ -21,28 +21,24 @@
         <nav id="nav-mobile" aria-label="Main Navigation">
             <ul>
                 <li>
-                    <a href="index.html" aria-current="page"
-                        ><span class="icon">&#8962;</span>
-                        <span class="visually-hidden">Home</span></a
-                    >
+                    <a href="index.html" aria-label="Home">
+                        <span class="icon">&#127968;</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="about.html"
-                        ><span class="icon">&#9873;</span>
-                        <span class="visually-hidden">About</span></a
-                    >
+                    <a href="about.html" aria-label="About">
+                        <span class="icon">&#8505;</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="community_feed.html" aria-current="page"
-                        ><span class="icon">&#9733;</span>
-                        <span class="visually-hidden">Community Feed</span></a
-                    >
+                    <a href="community_feed.html" aria-current="page" aria-label="Community Feed">
+                        <span class="icon">&#128101;</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="create_post.html"
-                        ><span class="icon">&#9878;</span>
-                        <span class="visually-hidden">Join the Community</span></a
-                    >
+                    <a href="news.html" aria-label="News">
+                        <span class="icon">&#128240;</span>
+                    </a>
                 </li>
             </ul>
         </nav>
@@ -105,8 +101,13 @@
                 </article>
 
                 <!-- FEED SECTION -->
-                <section class="card-container m-y-5" aria-labelledby="feed-section-heading">
-                    <h2 id="feed-section-heading" class="visually-hidden">Latest Community Posts</h2>
+                <section
+                    class="card-container m-y-5"
+                    aria-labelledby="feed-section-heading"
+                >
+                    <h2 id="feed-section-heading" class="visually-hidden">
+                        Latest Community Posts
+                    </h2>
 
                     <!-- Example post 1 -->
                     <div class="card">
@@ -161,7 +162,9 @@
 
                 <!-- DYNAMIC COMMUNITY LIST FROM API -->
                 <section id="community-list" class="m-t-5" aria-live="polite">
-                    <h2 class="visually-hidden">Latest Community Posts from API</h2>
+                    <h2 class="visually-hidden">
+                        Latest Community Posts from API
+                    </h2>
                     <!-- API content will be injected here -->
                 </section>
             </div>

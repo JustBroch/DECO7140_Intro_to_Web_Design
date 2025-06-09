@@ -13,7 +13,6 @@ nav ul {
 }
 
 /* Responsive control */
-/* Media query should be below here */
 
 #nav-mobile {
     position: fixed;
@@ -56,9 +55,9 @@ nav ul {
 }
 
 #nav-desktop ul {
-    max-width: 1200px; /* <--- Nytt: begrens bredden */
-    margin: 0 auto; /* <--- Nytt: sentrer innhold */
-    padding: 0 2rem; /* <--- Nytt: litt padding fra kantene */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -67,7 +66,7 @@ nav ul {
 }
 
 #nav-desktop ul li:first-child {
-    margin-right: auto; /* Skyver resten mot høyre */
+    margin-right: auto;
 }
 
 .responsive-img {
@@ -76,9 +75,6 @@ nav ul {
     height: auto;
     margin: 1rem auto;
 }
-
-/* MENUS */
-/* Responsive control */
 
 @media screen and (max-width: 767px) {
     .container {
@@ -95,6 +91,7 @@ nav ul {
         display: none;
     }
 }
+
 /* Hide h1 for accessibility at Home page */
 .visually-hidden {
     position: absolute !important;
@@ -111,82 +108,73 @@ nav ul {
 /* -- reusable container for cards -- */
 .card-container {
     display: grid;
-    flex-direction: column; /* mobile first: vertically */
-    gap: 1rem; /* distance between cards */
+    flex-direction: column;
+    gap: 1rem;
     padding: 1rem;
 }
 
 @media (min-width: 768px) {
     .card-container {
-        flex-direction: row; /* on desktop: rows */
-        flex-wrap: wrap; /* if full -> new row */
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 }
 
 /* --- Styles for forms --- */
-
-/* Generell styling for alle form-grupper for å stable label og input/select/textarea */
 .form-group {
     display: flex;
-    flex-direction: column; /* Stabler elementene vertikalt */
-    margin-bottom: 1rem; /* Mellomrom mellom hver form-gruppe */
+    flex-direction: column;
+    margin-bottom: 1rem;
 }
 
-/* Stil for alle input-felt, textarea og select */
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group input[type="url"],
 .form-group select,
 .form-group textarea {
-    padding: 0.75rem; /* Mindre padding for en slankere look */
+    padding: 0.75rem;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font: inherit; /* Arver font fra body */
-    width: 100%; /* Tar hele bredden av sin forelder */
-    box-sizing: border-box; /* Viktig for å inkludere padding i bredden */
-    margin-top: 0.25rem; /* Lite mellomrom mellom label og felt */
+    font: inherit;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 0.25rem;
 }
 
-/* Stil for når feltet er i fokus */
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-    outline: none; /* Fjerner standard nettleser-outline */
-    border-color: var(--primary); /* Bruker din primærfarge for fokus */
-    box-shadow: 0 0 0 2px rgba(var(--primary-rgb, 30, 64, 175), 0.2); /* Lett skygge for fokus */
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(var(--primary-rgb, 30, 64, 175), 0.2);
 }
 
-/* Stil for labels */
 .form-group label {
-    font-weight: bold; /* Fet skrift for etiketter */
-    margin-bottom: 0.25rem; /* Litt avstand under label */
-    font-size: 0.95rem; /* Litt mindre fontstørrelse */
-    color: var(--text-color, #333); /* Bruker din tekstfarge */
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+    font-size: 0.95rem;
+    color: var(--text-color, #333);
 }
 
-/* Stil for den røde stjernen for obligatoriske felt */
 .required-star {
-    color: var(--accent); /* Bruker din aksentfarge (rød) */
+    color: var(--accent);
     margin-left: 0.25rem;
 }
 
-/* Stil for selve form-containeren (post-form-card) */
 .post-form-card {
     background-color: white;
     border-radius: 10px;
-    padding: 2rem; /* Litt mer padding for at formen skal puste */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* En lett skygge for å skille den ut */
-    margin-top: 2rem; /* Avstand fra overliggende innhold */
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-top: 2rem;
 }
 
-/* Stil for beskrivelse under H2 i form-card */
 .form-description {
     font-size: 0.9rem;
     color: #666;
     margin-bottom: 1.5rem;
 }
 
-/* Stil for "Publish Post" knappen - juster til din egen knapp-stil */
 .button.primary-button {
     background-color: var(--accent-color);
     color: var(--text-color);
@@ -197,7 +185,7 @@ nav ul {
     font-size: 1rem;
     font-weight: bold;
     transition: background-color 0.3s ease;
-    align-self: flex-start; /* Justerer knappen til venstre hvis formen er flex-kolonne */
+    align-self: flex-start;
 }
 
 .primary-button:hover {
@@ -213,79 +201,71 @@ a.button {
 .news-card {
     background-color: white;
     border-radius: 10px;
-    overflow: hidden; /* Veldig viktig for at bilder ikke stikker ut */
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    /* Jonas hadde width: 400px; her. Vi vil gjøre den mer responsiv */
-    /* max-width: 400px; /* Kan brukes hvis du vil ha en maksimal bredde per kort */
 }
 
 .news-image {
     width: 100%;
-    height: 200px; /* Fast høyde for bildet */
-    object-fit: cover; /* Sørger for at bildet fyller plassen uten å strekkes */
+    height: 200px;
+    object-fit: cover;
     border-bottom: 1px solid #ccc;
 }
 
 .news-content {
     padding: 1rem;
-    display: flex; /* Gjør innholdet til en flex-container for å kontrollere Read more-knappen */
+    display: flex;
     flex-direction: column;
-    flex-grow: 1; /* Sørger for at innholdet fyller vertikal plass */
+    flex-grow: 1;
 }
 
 .news-content h3 {
-    margin-top: 0.5rem; /* Juster ved behov */
-    margin-bottom: 0.5rem; /* Juster ved behov */
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .news-content p {
-    margin-bottom: 1rem; /* Juster ved behov */
+    margin-bottom: 1rem;
 }
 
 .news-author {
     font-size: 0.8rem;
     color: #999;
-    margin-top: 1rem; /* Avstand over forfatternavn */
+    margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
 .news-link {
-    color: var(--primary); /* Bruker din primærfarge */
+    color: var(--primary);
     text-decoration: none;
     font-weight: bold;
-    margin-top: auto; /* Dytter "Read more" lenken til bunnen av nyhetsinnholdet */
+    margin-top: auto;
 }
 
-/* --- Nyhetside Layout --- */
+/* --- News Page Layout --- */
 .news-grid-container {
     display: grid;
-    /* Standard for mobil: 1 kolonne. auto-fit tilpasser antall kolonner */
-    /* minmax(280px, 1fr) sikrer at kortene er minst 280px brede og fyller resten */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-
-    gap: 1.5rem; /* Mellomrom mellom kortene (juster ved behov) */
-    padding: 1rem; /* Padding for selve containeren */
+    gap: 1.5rem;
+    padding: 1rem;
 }
 
 @media (min-width: 768px) {
-    /* Ved 768px bredde eller mer (f.eks. nettbrett) */
     .news-grid-container {
-        grid-template-columns: repeat(2, 1fr); /* To kolonner */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (min-width: 1024px) {
-    /* Ved 1024px bredde eller mer (f.eks. desktop) */
     .news-grid-container {
-        grid-template-columns: repeat(3, 1fr); /* Tre kolonner */
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
-/* Valgfritt: For veldig store skjermer, 4 kolonner */
 @media (min-width: 1300px) {
     .news-grid-container {
-        grid-template-columns: repeat(4, 1fr); /* Fire kolonner */
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
@@ -345,19 +325,71 @@ a.button {
 
 .cta-card .card-content .button:hover {
     background-color: var(--primary-color);
-    color: var(--text-color);
+    color: #fff;
 }
 
 .cta-card-link {
-    text-decoration: none; /* Fjern underline fra link */
-    color: inherit; /* Bruk samme tekstfarge som vanlig */
-    display: block; /* Så hele kortet er klikkbart */
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
-/* Footer */
+/* Accessibility improvements */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--primary-color, #1e40af);
+    outline-offset: 2px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#nav-desktop ul li a:focus,
+#nav-mobile ul li a:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.cta-card-link:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 4px;
+}
+
+.cta-card-link[aria-label] {
+    /* nothing needed visually — aria-label will fix screen reader mismatch */
+}
+
+/* === Hero section === */
+.hero-section {
+    background-image: url("../../assets/back.webp");
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    color: white;
+    position: relative;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.hero-section .hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+/* === Footer === */
 .site-footer {
     background-color: var(--accent-color);
-    color: var(--text-color);
+    color: #fff;
     padding: var(--space-4) var(--space-3);
     border-top: 1px solid #ccc;
     font-size: 1rem;
@@ -366,15 +398,17 @@ a.button {
 .site-footer h4 {
     font-size: 1.2rem;
     margin-bottom: var(--space-2);
+    color: #fff;
 }
 
 .site-footer a {
     text-decoration: none;
-    color: var(--text-color);
+    color: #fff;
 }
 
 .site-footer a:hover {
     font-weight: bold;
+    text-decoration: none;
 }
 
 .site-footer .footer-columns {
@@ -400,128 +434,5 @@ a.button {
     text-align: center;
     margin-top: var(--space-4);
     font-size: 0.9rem;
-    color: #666;
-}
-
-/* === ACCESSIBILITY IMPROVEMENTS === */
-
-/* 1️⃣ Better contrast for footer */
-.site-footer {
-    background-color: var(--accent-color);
-    color: #fff; /* Ensure white text */
-    padding: var(--space-4) var(--space-3);
-    border-top: 1px solid #ccc;
-    font-size: 1rem;
-}
-
-.site-footer h4 {
-    font-size: 1.2rem;
-    margin-bottom: var(--space-2);
-    color: #fff;
-}
-
-.site-footer a {
-    text-decoration: none;
-    color: #fff;
-}
-
-.site-footer a:hover {
-    font-weight: bold;
-    text-decoration: underline; /* Provide visual cue */
-}
-
-.site-footer .footer-bottom {
-    text-align: center;
-    margin-top: var(--space-4);
-    font-size: 0.9rem;
-    color: #ccc; /* Slightly lighter grey */
-}
-
-/* 2️⃣ Focus visible for ALL links and buttons */
-a:focus-visible,
-button:focus-visible {
-    outline: 3px solid var(--primary-color, #1e40af);
-    outline-offset: 2px;
-}
-
-/* 3️⃣ Underline on hover for links for color not only cue */
-a:hover {
-    text-decoration: underline;
-}
-
-/* 4️⃣ Safe CTA-card button hover */
-.cta-card .card-content .button:hover {
-    background-color: var(--primary-color);
-    color: #fff;
-}
-
-/* 5️⃣ Hero-section text background for contrast */
-.hero-section .hero-content {
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent bg */
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    display: inline-block; /* shrink to content */
-}
-
-/* === END ACCESSIBILITY IMPROVEMENTS === */
-
-/* === ACCESSIBILITY FIXES === */
-
-/* Footer contrast fix */
-.site-footer {
-    background-color: var(--accent-color);
-    color: #fff;
-}
-
-.site-footer h4 {
-    color: #fff;
-}
-
-.site-footer a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.site-footer a:hover,
-.site-footer a:focus {
-    font-weight: bold;
-    outline: 2px solid #fff;
-    outline-offset: 2px;
-}
-
-/* Navigation focus visible */
-#nav-desktop ul li a:focus,
-#nav-mobile ul li a:focus {
-    outline: 2px solid var(--primary-color);
-    outline-offset: 2px;
-}
-
-/* CTA card links — add outline */
-.cta-card-link:focus {
-    outline: 2px solid var(--primary-color);
-    outline-offset: 4px;
-}
-
-/* Hero-section: add background overlay for HC-mode */
-.hero-section {
-    background-image: url("../../assets/back.webp");
-    background-color: rgba(0, 0, 0, 0.5); /* fallback background */
-    background-blend-mode: overlay;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-    color: white;
-    position: relative;
-    padding: 2rem;
-    box-sizing: border-box;
-}
-
-/* CTA card links: accessible name fix — helper */
-.cta-card-link[aria-label] {
-    /* nothing needed visually — aria-label will fix screen reader mismatch */
+    color: #ccc;
 }
