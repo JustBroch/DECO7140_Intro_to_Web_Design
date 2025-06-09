@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- CSS Linking -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/page_css/index.css" />
+        <link rel="stylesheet" href="css/component_skeletons/card.css" />
+
+        <link rel="icon" type="image/png" href="assets/16.png" />
+
+        <title>Tech News - LoopedIn</title>
+    </head>
+    <body>
+        <!-- NAVIGATION -->
+        <nav id="nav-mobile" aria-label="Main Navigation">
+            <ul>
+                <li>
+                    <a href="index.html" aria-label="Home">
+                        <span class="icon">&#127968;</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="about.html" aria-label="About">
+                        <span class="icon">&#8505;</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="community_feed.html" aria-label="Community Feed">
+                        <span class="icon">&#128101;</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="news.html" aria-current="page" aria-label="News">
+                        <span class="icon">&#128240;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <nav id="nav-desktop" aria-label="Main Navigation">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <img
+                            src="assets/loop.svg"
+                            alt="LoopIn Icon"
+                            style="vertical-align: middle; margin-right: 5px"
+                        />
+                        LoopedIn
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="community_feed.html">Community Feed</a>
+                </li>
+                <li>
+                    <a href="news.html" aria-current="page">News</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- MAIN CONTENT -->
+        <main>
+            <div class="container">
+                <h1>Tech News</h1>
+
+                <!-- Landmark heading for section -->
+                <h2 class="visually-hidden">Tech News Articles</h2>
+
+                <section class="news-grid-container">
+                    <div class="news-card">
+                        <img
+                            class="news-image"
+                            src="assets/protein.jpg"
+                            alt="Protein Folding AI Research"
+                            loading="lazy"
+                        />
+                        <div class="news-content">
+                            <h3>AI Breakthrough in Protein Folding</h3>
+                            <p>
+                                DeepMind's latest AI model solves complex
+                                protein structures, paving the way for faster
+                                drug discovery.
+                            </p>
+                            <p class="news-author">By TechTimes</p>
+                            <a
+                                href="https://www.nature.com/articles/s41586-021-03819-2"
+                                class="news-link"
+                                aria-label="Read more about AI Protein Folding"
+                                >Read more</a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="news-card">
+                        <img
+                            class="news-image"
+                            src="assets/blockchain.jpg"
+                            alt="Blockchain in Supply Chains"
+                            loading="lazy"
+                        />
+                        <div class="news-content">
+                            <h3>Blockchain for Supply Chains</h3>
+                            <p>
+                                Leading companies adopt blockchain to improve
+                                supply chain transparency and reduce fraud.
+                            </p>
+                            <p class="news-author">By GlobalTech</p>
+                            <a
+                                href="https://www.ibm.com/blockchain/solutions/supply-chain"
+                                class="news-link"
+                                aria-label="Read more about Blockchain Supply Chains"
+                                >Read more</a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="news-card">
+                        <img
+                            class="news-image"
+                            src="assets/robot.jpg"
+                            alt="Next Generation Robotics"
+                            loading="lazy"
+                        />
+                        <div class="news-content">
+                            <h3>Next-Gen Robotics Enter Manufacturing</h3>
+                            <p>
+                                Collaborative robots (cobots) are transforming
+                                manufacturing processes with improved
+                                flexibility and efficiency.
+                            </p>
+                            <p class="news-author">By RoboticsWeekly</p>
+                            <a
+                                href="https://spectrum.ieee.org/robotics"
+                                class="news-link"
+                                aria-label="Read more about Robotics News"
+                                >Read more</a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="news-card">
+                        <img
+                            class="news-image"
+                            src="assets/vr.jpeg"
+                            alt="Virtual Reality in Education"
+                            loading="lazy"
+                        />
+                        <div class="news-content">
+                            <h3>VR in Education: The Next Frontier</h3>
+                            <p>
+                                Virtual reality is being used in classrooms to
+                                create immersive learning experiences across
+                                disciplines.
+                            </p>
+                            <p class="news-author">By EdTechWorld</p>
+                            <a
+                                href="https://www.edtechmagazine.com/higher/article/2024/04/how-vr-changing-classrooms"
+                                class="news-link"
+                                aria-label="Read more about VR in Education"
+                                >Read more</a
+                            >
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="site-footer">
+            <div class="footer-columns">
+                <div>
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li>
+                            <a href="implementation_rationale.html"
+                                >Implementation Rationale</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Community</h4>
+                    <ul>
+                        <li>
+                            <a href="community_feed.html">Community Feed</a>
+                        </li>
+                        <li>
+                            <a href="create_post.html">Join the Community</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Resources</h4>
+                    <ul>
+                        <li>
+                            <a href="news.html" aria-current="page"
+                                >Tech News</a
+                            >
+                        </li>
+                        <li>
+                            <a href="ethical_response.html">Ethical Response</a>
+                        </li>
+                        <li>
+                            <a href="genai_mt_acknowledgement.html"
+                                >GenAI Acknowledgement</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                © 2025 Just Broch. All rights reserved.
+            </div>
+        </footer>
+    </body>
+</html>

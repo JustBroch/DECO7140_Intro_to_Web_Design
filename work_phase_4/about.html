@@ -14,33 +14,31 @@
 
         <link rel="icon" type="image/png" href="assets/16.png" />
 
-        <title>Work Phase 4</title>
+        <title>About - LoopedIn</title>
     </head>
     <body>
+        <!-- NAVIGATION -->
         <nav id="nav-mobile" aria-label="Main Navigation">
             <ul>
                 <li>
-                    <a href="index.html"><span class="icon">&#8962;</span></a>
+                    <a href="index.html" aria-label="Home">
+                        <span class="icon">&#127968;</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="about.html" aria-current="page"
-                        ><span class="icon">&#9873;</span></a
-                    >
+                    <a href="about.html" aria-current="page" aria-label="About">
+                        <span class="icon">&#8505;</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="community_feed.html"
-                        ><span class="icon">&#9733;</span></a
-                    >
+                    <a href="community_feed.html" aria-label="Community Feed">
+                        <span class="icon">&#128101;</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="ethical_response.html"
-                        ><span class="icon">&#9878;</span></a
-                    >
-                </li>
-                <li>
-                    <a href="genai_mt_acknowledgement.html"
-                        ><span class="icon">&#9776;</span></a
-                    >
+                    <a href="news.html" aria-label="News">
+                        <span class="icon">&#128240;</span>
+                    </a>
                 </li>
             </ul>
         </nav>
@@ -48,135 +46,207 @@
         <nav id="nav-desktop" aria-label="Main Navigation">
             <ul>
                 <li>
-                    <a href="index.html">Home</a>
+                    <a href="index.html">
+                        <img
+                            src="assets/loop.svg"
+                            alt="LoopIn Icon"
+                            style="vertical-align: middle; margin-right: 5px"
+                        />
+                        LoopedIn
+                    </a>
                 </li>
-                <li>
-                    <a href="about.html" aria-current="page">About</a>
-                </li>
-                <li>
-                    <a href="community_feed.html">Community Feed</a>
-                </li>
-                <li>
-                    <a href="ethical_response.html">Ethical Response</a>
-                </li>
-                <li>
-                    <a href="genai_mt_acknowledgement.html">GenAI</a>
-                </li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" aria-current="page">About</a></li>
+                <li><a href="community_feed.html">Community Feed</a></li>
+                <li><a href="news.html">News</a></li>
             </ul>
         </nav>
 
+        <!-- MAIN CONTENT -->
         <main>
             <div class="container">
-                <h1>About LoopedIn</h1>
-                <p>
-                    A visual and textual map showing the structure of the
-                    website, how pages are linked, and the user’s expected
-                    navigation flow across both mobile and desktop.
-                </p>
+                <header>
+                    <h1>About LoopedIn</h1>
+                </header>
 
-                <p>This is a draft of the site map.</p>
+                <section class="about-intro">
+                    <h2>Our Journey: Connecting Tomorrow's Innovators</h2>
+                    <p>
+                        At LoopedIn, we believe that innovation thrives when
+                        people connect, collaborate, and share ideas. Our
+                        platform was founded with a simple goal: to bring
+                        together forward-thinking minds from across the tech
+                        landscape and create a space where ideas can turn into
+                        real-world impact.
+                    </p>
+                    <p>
+                        Whether you're an experienced developer building the
+                        next breakthrough, a student exploring emerging
+                        technologies, a researcher pushing the boundaries of AI,
+                        or an entrepreneur launching a startup, LoopedIn is here
+                        to support your journey. We value open knowledge,
+                        ethical innovation, and accessibility — ensuring that
+                        everyone, regardless of background or skill level, can
+                        contribute and grow within our community.
+                    </p>
+                    <p>
+                        Together, we explore the frontiers of AI, robotics,
+                        software development, blockchain, and beyond. Our
+                        mission is to foster meaningful connections, encourage
+                        cross-disciplinary collaboration, and provide a dynamic
+                        space where tomorrow’s technology is imagined today.
+                    </p>
+                </section>
 
-                <img
-                    src="assets/draft.png"
-                    alt="draft site map"
-                    class="responsive-img"
-                />
-                <p>This is the site map for the website.</p>
-                <img
-                    src="assets/Site_Map.png"
-                    alt="site map"
-                    class="responsive-img"
-                />
-
-                <section class="accordion m-y-3">
-                    <div class="accordion-item">
-                        <button class="accordion-header">▷ Inspiration</button>
-                        <div class="accordion-content">
-                            <p class="m-y-3">
-                                LoopedIn is a hub for users to see content
-                                regardin technology and innovation. It is a
-                                platform where the users can interact with each
-                                other and share their ideas. It supports the
-                                client's goal of connecting with others and
-                                sharing knowledge. The user story is "As a user,
-                                I want to connect with others and share my
-                                ideas."
-
-                                <span style="color: var(--accent2-color)">
-                                </span>
-                            </p>
-
-                            <!-- Nested Accordion for Sub-pages -->
-                            <div class="accordion nested">
-                                <div class="accordion-item">
-                                    <button class="accordion-header">
-                                        ▹▷ Easy access to website features
-                                    </button>
-                                    <div class="accordion-content">
-                                        <p class="m-y-3">
-                                            The website is designed to be
-                                            user-friendly and easy to navigate.
-                                            It provides quick access to all the
-                                            features and functionalities of the
-                                            platform. The user story is "As a
-                                            user, I want to easily access all
-                                            the features of the website from the
-                                            get go."
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <section class="mission-vision">
+                    <div class="content-block">
+                        <h2>Our Mission</h2>
+                        <p>
+                            Our mission is to create a global, inclusive digital
+                            hub where tech enthusiasts, innovators, and
+                            changemakers can connect, exchange knowledge, and
+                            collaborate across disciplines. We aim to foster an
+                            environment where individuals at every stage of
+                            their journey — from curious beginners to seasoned
+                            experts — can showcase their projects, seek
+                            feedback, access learning resources, and inspire one
+                            another to develop the technologies that will shape
+                            a better future.
+                        </p>
+                    </div>
+                    <div class="content-block">
+                        <h2>Our Vision</h2>
+                        <p>
+                            We envision a future where the boundaries of
+                            innovation are erased, where ideas flow freely
+                            across borders, industries, and communities. A
+                            future where everyone with a passion for technology
+                            — regardless of background, education, or location —
+                            can access the tools, mentorship, and collaborative
+                            networks needed to transform their boldest ideas
+                            into reality. At LoopedIn, we strive to be the
+                            catalyst that empowers the next generation of
+                            innovators to push the limits of what is possible
+                            and build technology that serves humanity.
+                        </p>
                     </div>
                 </section>
 
-                <section class="accordion m-y-3">
-                    <div class="accordion-item">
-                        <button class="accordion-header">▷ Search</button>
-                        <div class="accordion-content">
+                <section class="values-section">
+                    <h2>Our Core Values</h2>
+                    <div class="values-grid">
+                        <article class="value-item">
+                            <h3>Collaboration</h3>
                             <p>
-                                A page for user profiles, private messaging, and
-                                interest-based networking.
-                                <br /><br />
-                                <strong>Features:</strong> Searchable profiles,
-                                tags for interests, contact buttons.
-                                <br />
-                                <strong>User/client support:</strong> Supports
-                                community growth and collaboration. Matches user
-                                story: “As a user, I want to connect with others
-                                in my field.”
-                                <br />
-                                <strong>Accessibility:</strong> Clear labels,
-                                ARIA roles for form fields, logical tab order.
+                                We foster open exchange of ideas and mutual
+                                support.
                             </p>
-                        </div>
+                        </article>
+                        <article class="value-item">
+                            <h3>Innovation</h3>
+                            <p>
+                                We encourage the exploration of new concepts and
+                                groundbreaking thinking.
+                            </p>
+                        </article>
+                        <article class="value-item">
+                            <h3>Inclusion</h3>
+                            <p>
+                                We build a community where all voices are valued
+                                and respected.
+                            </p>
+                        </article>
+                        <article class="value-item">
+                            <h3>Learning</h3>
+                            <p>
+                                We create an environment for continuous personal
+                                and professional growth.
+                            </p>
+                        </article>
                     </div>
+                </section>
 
-                    <div class="accordion-item">
-                        <button class="accordion-header">▷ Events</button>
-                        <div class="accordion-content">
-                            <p>
-                                A page for upcoming community events, with
-                                filters and RSVP options.
-                                <br /><br />
-                                <strong>Features:</strong> Event calendar, RSVP
-                                buttons.
-                                <br />
-                                <strong>User/client support:</strong> Promotes
-                                engagement and attendance. Aligns with user
-                                story: “As a user, I want to find events related
-                                to my interests.”
-                                <br />
-                                <strong>Accessibility:</strong> High-contrast
-                                links, date formats for screen readers,
-                                mobile-friendly calendar layout.
-                            </p>
-                        </div>
-                    </div>
+                <section class="our-story">
+                    <h2>The Story Behind LoopedIn</h2>
+                    <p>
+                        LoopedIn began as a personal project driven by the
+                        founder's passion for technology and community building.
+                        I envisioned a space where developers, engineers, and
+                        tech enthusiasts could go beyond surface-level content
+                        and engage in meaningful discussions, share knowledge,
+                        and collaborate on innovative projects. What started as
+                        a simple idea has grown into a dynamic platform that now
+                        connects innovators from around the world — and the
+                        journey is just getting started.
+                    </p>
+                </section>
+
+                <section class="join-us-cta" aria-labelledby="join-us-heading">
+                    <h2 id="join-us-heading">Be Part of the Future!</h2>
+                    <p>
+                        Are you ready to contribute, learn, and grow with a
+                        network of passionate technologists?
+                    </p>
+                    <!-- No button here, as per your instruction -->
                 </section>
             </div>
         </main>
-        <!-- Linking to External JavaScript -->
+
+        <!-- FOOTER -->
+        <footer class="site-footer">
+            <div class="footer-columns">
+                <div>
+                    <h4>Platform</h4>
+                    <ul>
+                        <li>
+                            <a
+                                href="about.html"
+                                aria-label="Learn about the LoopedIn platform"
+                                >About Us</a
+                            >
+                        </li>
+                        <li>
+                            <a href="implementation_rationale.html"
+                                >Implementation Rationale</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Community</h4>
+                    <ul>
+                        <li>
+                            <a href="community_feed.html">Community Feed</a>
+                        </li>
+                        <li>
+                            <a href="create_post.html">Join the Community</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="news.html">Tech News</a></li>
+                        <li>
+                            <a href="ethical_response.html">Ethical Response</a>
+                        </li>
+                        <li>
+                            <a href="genai_mt_acknowledgement.html"
+                                >GenAI Acknowledgement</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                © 2025 Just Broch. All rights reserved.
+            </div>
+        </footer>
+
+        <!-- JS -->
         <script type="module" src="js/site_map.js"></script>
     </body>
 </html>

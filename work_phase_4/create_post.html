@@ -12,33 +12,31 @@
 
         <link rel="icon" type="image/png" href="assets/16.png" />
 
-        <title>Work Phase 4</title>
+        <title>Join the Community - LoopedIn</title>
     </head>
     <body>
+        <!-- NAVIGATION -->
         <nav id="nav-mobile" aria-label="Main Navigation">
             <ul>
                 <li>
-                    <a href="index.html" aria-current="page"
-                        ><span class="icon">&#8962;</span></a
-                    >
+                    <a href="index.html" aria-label="Home">
+                        <span class="icon">&#127968;</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="about.html"><span class="icon">&#9873;</span></a>
+                    <a href="about.html" aria-label="About">
+                        <span class="icon">&#8505;</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="community_feed.html"
-                        ><span class="icon">&#9733;</span></a
-                    >
+                    <a href="community_feed.html" aria-label="Community Feed">
+                        <span class="icon">&#128101;</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="ethical_response.html"
-                        ><span class="icon">&#9878;</span></a
-                    >
-                </li>
-                <li>
-                    <a href="genai_mt_acknowledgement.html"
-                        ><span class="icon">&#9776;</span></a
-                    >
+                    <a href="news.html" aria-label="News">
+                        <span class="icon">&#128240;</span>
+                    </a>
                 </li>
             </ul>
         </nav>
@@ -46,11 +44,17 @@
         <nav id="nav-desktop" aria-label="Main Navigation">
             <ul>
                 <li>
-                    <a href="index.html" aria-current="page">LoopedIn</a>
+                    <a href="index.html" aria-current="page">
+                        <img
+                            src="assets/loop.svg"
+                            alt="LoopIn Icon"
+                            style="vertical-align: middle; margin-right: 5px"
+                        />
+                        LoopedIn
+                    </a>
                 </li>
-                <li></li>
                 <li>
-                    <a href="index.html" aria-current="page">Home</a>
+                    <a href="index.html">Home</a>
                 </li>
                 <li>
                     <a href="about.html">About</a>
@@ -59,68 +63,110 @@
                     <a href="community_feed.html">Community Feed</a>
                 </li>
                 <li>
-                    <a href="create_post.html">Create Post</a>
-                </li>
-                <li>
-                    <a href="genai_mt_acknowledgement.html">GenAI</a>
+                    <a href="news.html">News</a>
                 </li>
             </ul>
         </nav>
 
+        <!-- MAIN CONTENT -->
         <main>
             <div class="container">
+                <h1 class="m-y-5">Join the Community</h1>
+                <h3>
+                    Introduce yourself and connect with fellow innovators on
+                    LoopedIn. Your message and profile will appear in the
+                    Community Feed.
+                </h3>
 
-
-                <section>
-                    <h2>
-                        LoopedIn - Shaping a digital space for tech innovators
-                        and communities!
-                    </h2>
-
+                <article class="post-form-card">
+                    <h2 id="form-title">Join the Community</h2>
+                    <p class="form-description" id="form-description">
+                        Fill out the form below to introduce yourself to the
+                        LoopedIn community. Your message will appear in the
+                        Community Feed.
                     </p>
-                </section>
+
+                    <form
+                        id="community-form"
+                        enctype="multipart/form-data"
+                        aria-labelledby="form-title"
+                        aria-describedby="form-description"
+                    >
+                        <div class="form-group">
+                            <label for="name"
+                                >Your Full Name<span class="required-star"
+                                    >*</span
+                                ></label
+                            >
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                required
+                                placeholder="E.g., John Doe"
+                                aria-required="true"
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email"
+                                >Your Email<span class="required-star"
+                                    >*</span
+                                ></label
+                            >
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required
+                                placeholder="E.g., john.doe@example.com"
+                                aria-required="true"
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message"
+                                >Your Message to the Community</label
+                            >
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="8"
+                                placeholder="Write a short introduction or share your thoughts..."
+                            ></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="photo">Upload a Photo (optional)</label>
+                            <input
+                                type="file"
+                                id="photo"
+                                name="photo"
+                                accept="image/*"
+                            />
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="button primary-button m-t-2"
+                            aria-label="Submit your community post"
+                        >
+                            Join Community
+                        </button>
+                    </form>
+
+                    <p id="form-feedback" class="m-t-3" aria-live="polite"></p>
+                </article>
             </div>
         </main>
+
+        <!-- FOOTER -->
         <footer class="site-footer">
             <div class="footer-columns">
                 <div>
                     <h4>Platform</h4>
                     <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">How It Works</a></li>
-                        <li><a href="#">Careers</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4>Community</h4>
-                    <ul>
-                        <li><a href="#">Browse Discussions</a></li>
-                        <li><a href="#">Top Contributors</a></li>
-                        <li><a href="#">Events</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4>Support</h4>
-                    <ul>
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">Code of Conduct</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4>Legal</h4>
-                    <ul>
-                        <li>
-                            <a href="genai_mt_acknowledgement.html"
-                                >GenAI Acknowledgement</a
-                            >
-                        </li>
-                        <li>
-                            <a href="ethical_response.html">Ethical Response</a>
-                        </li>
+                        <li><a href="about.html">About Us</a></li>
                         <li>
                             <a href="implementation_rationale.html"
                                 >Implementation Rationale</a
@@ -128,11 +174,43 @@
                         </li>
                     </ul>
                 </div>
+
+                <div>
+                    <h4>Community</h4>
+                    <ul>
+                        <li>
+                            <a href="community_feed.html">Community Feed</a>
+                        </li>
+                        <li>
+                            <a href="create_post.html" aria-current="page"
+                                >Join the Community</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="news.html">Tech News</a></li>
+                        <li>
+                            <a href="ethical_response.html">Ethical Response</a>
+                        </li>
+                        <li>
+                            <a href="genai_mt_acknowledgement.html"
+                                >GenAI Acknowledgement</a
+                            >
+                        </li>
+                    </ul>
+                </div>
             </div>
 
             <div class="footer-bottom">
-                © 2025 LoopedIn. All rights reserved.
+                © 2025 Just Broch. All rights reserved.
             </div>
         </footer>
+
+        <!-- JS -->
+        <script type="module" src="js/create_post.js"></script>
     </body>
 </html>

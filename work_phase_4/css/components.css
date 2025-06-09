@@ -1,4 +1,5 @@
 @import "./component_skeletons/accordion.css";
+@import "base.css";
 
 /* MENUS */
 /* Base styles */
@@ -12,7 +13,6 @@ nav ul {
 }
 
 /* Responsive control */
-/* Media query should be below here */
 
 #nav-mobile {
     position: fixed;
@@ -34,7 +34,7 @@ nav ul {
     position: fixed;
     top: 0;
     width: 100vw;
-    background-color: var(--secondary-color);
+    background-color: var(--background-color);
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
     display: none;
     z-index: 1000;
@@ -54,15 +54,27 @@ nav ul {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+#nav-desktop ul {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+
+#nav-desktop ul li:first-child {
+    margin-right: auto;
+}
+
 .responsive-img {
     display: block;
     max-width: 100%;
     height: auto;
     margin: 1rem auto;
 }
-
-/* MENUS */
-/* Responsive control */
 
 @media screen and (max-width: 767px) {
     .container {
@@ -80,25 +92,304 @@ nav ul {
     }
 }
 
+/* Hide h1 for accessibility at Home page */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
 /* -- reusable container for cards -- */
 .card-container {
-    display: flex;
-    flex-direction: column; /* mobile first: vertically */
-    gap: 1rem; /* distance between cards */
+    display: grid;
+    flex-direction: column;
+    gap: 1rem;
     padding: 1rem;
 }
 
 @media (min-width: 768px) {
     .card-container {
-        flex-direction: row; /* on desktop: rows */
-        flex-wrap: wrap; /* if full -> new row */
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 }
 
-/* Footer */
-.site-footer {
+/* --- Styles for forms --- */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="url"],
+.form-group select,
+.form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font: inherit;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 0.25rem;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(var(--primary-rgb, 30, 64, 175), 0.2);
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+    font-size: 0.95rem;
+    color: var(--text-color, #333);
+}
+
+.required-star {
+    color: var(--accent);
+    margin-left: 0.25rem;
+}
+
+.post-form-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-top: 2rem;
+}
+
+.form-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.button.primary-button {
     background-color: var(--accent-color);
     color: var(--text-color);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+}
+
+.primary-button:hover {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+a.button {
+    text-decoration: none;
+}
+
+/* --- News cards styling --- */
+.news-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ccc;
+}
+
+.news-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.news-content h3 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.news-content p {
+    margin-bottom: 1rem;
+}
+
+.news-author {
+    font-size: 0.8rem;
+    color: #999;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.news-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: auto;
+}
+
+/* --- News Page Layout --- */
+.news-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+@media (min-width: 768px) {
+    .news-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .news-grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1300px) {
+    .news-grid-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* --- CTA Cards styling --- */
+.cta-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cta-card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ccc;
+}
+
+.cta-card .card-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.cta-card .card-content h3 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.cta-card .card-content p {
+    flex-grow: 1;
+    margin-bottom: 1rem;
+}
+
+.cta-card .card-content .button {
+    align-self: flex-start;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.cta-card .card-content .button:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.cta-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Accessibility improvements */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--primary-color, #1e40af);
+    outline-offset: 2px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#nav-desktop ul li a:focus,
+#nav-mobile ul li a:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.cta-card-link:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 4px;
+}
+
+.cta-card-link[aria-label] {
+    /* nothing needed visually — aria-label will fix screen reader mismatch */
+}
+
+/* === Hero section === */
+.hero-section {
+    background-image: url("../../assets/back.webp");
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    color: white;
+    position: relative;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.hero-section .hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+/* === Footer === */
+.site-footer {
+    background-color: var(--accent-color);
+    color: #fff;
     padding: var(--space-4) var(--space-3);
     border-top: 1px solid #ccc;
     font-size: 1rem;
@@ -107,15 +398,17 @@ nav ul {
 .site-footer h4 {
     font-size: 1.2rem;
     margin-bottom: var(--space-2);
+    color: #fff;
 }
 
 .site-footer a {
     text-decoration: none;
-    color: var(--text-color);
+    color: #fff;
 }
 
 .site-footer a:hover {
     font-weight: bold;
+    text-decoration: none;
 }
 
 .site-footer .footer-columns {
@@ -141,5 +434,5 @@ nav ul {
     text-align: center;
     margin-top: var(--space-4);
     font-size: 0.9rem;
-    color: #666;
+    color: #ccc;
 }

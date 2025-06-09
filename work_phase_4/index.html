@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/page_css/index.css" />
+        <link rel="stylesheet" href="css/component_skeletons/card.css" />
 
         <link rel="icon" type="image/png" href="assets/16.png" />
 
@@ -18,27 +20,24 @@
         <nav id="nav-mobile" aria-label="Main Navigation">
             <ul>
                 <li>
-                    <a href="index.html" aria-current="page"
-                        ><span class="icon">&#8962;</span></a
-                    >
+                    <a href="index.html" aria-current="page" aria-label="Home">
+                        <span class="icon">&#127968;</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="about.html"><span class="icon">&#9873;</span></a>
+                    <a href="about.html" aria-label="About">
+                        <span class="icon">&#8505;</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="community_feed.html"
-                        ><span class="icon">&#9733;</span></a
-                    >
+                    <a href="community_feed.html" aria-label="Community Feed">
+                        <span class="icon">&#128101;</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="ethical_response.html"
-                        ><span class="icon">&#9878;</span></a
-                    >
-                </li>
-                <li>
-                    <a href="genai_mt_acknowledgement.html"
-                        ><span class="icon">&#9776;</span></a
-                    >
+                    <a href="news.html" aria-label="News">
+                        <span class="icon">&#128240;</span>
+                    </a>
                 </li>
             </ul>
         </nav>
@@ -46,9 +45,15 @@
         <nav id="nav-desktop" aria-label="Main Navigation">
             <ul>
                 <li>
-                    <a href="index.html" aria-current="page">LoopedIn</a>
+                    <a href="index.html" aria-current="page"
+                        ><img
+                            src="assets/loop.svg"
+                            alt="LoopIn Icon"
+                            style="vertical-align: middle; margin-right: 5px"
+                        />
+                        LoopedIn</a
+                    >
                 </li>
-                <li></li>
                 <li>
                     <a href="index.html" aria-current="page">Home</a>
                 </li>
@@ -59,52 +64,132 @@
                     <a href="community_feed.html">Community Feed</a>
                 </li>
                 <li>
-                    <a href="create_post.html">Create Post</a>
-                </li>
-                <li>
-                    <a href="genai_mt_acknowledgement.html">GenAI</a>
+                    <a href="news.html">News</a>
                 </li>
             </ul>
         </nav>
 
         <main>
-            <div class="container">
-                <img
-                    src="assets/connecting_people.jpg"
-                    alt="draft site map"
-                    class="responsive-img"
-                />
+            <h1 class="visually-hidden">LoopedIn - Home</h1>
 
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h2>Collaborate. Share. Inspire.</h2>
+                </div>
+            </section>
+
+            <div class="container">
                 <section>
                     <h2>
                         LoopedIn - Shaping a digital space for tech innovators
                         and communities!
                     </h2>
+
                     <p>
-                        This website is a <strong>style guide</strong> for a
-                        proposed platform aimed at the
-                        <strong>Tech and Innovation Community</strong>. It
-                        outlines key design choices that will form the
-                        foundation of the final product – a professional social
-                        network for innovators.
-                    </p>
-                    <p>
-                        Inspired by platforms like LinkedIn, this site targets
-                        users in
+                        This site targets users in
                         <strong
                             >AI, robotics, software development, and emerging
                             tech</strong
                         >, providing space to share knowledge, connect, and
                         collaborate.
                     </p>
-                    <p>
-                        This style guide demonstrates key components such as
-                        typography, color usage, buttons, and layout patterns,
-                        all carefully designed to ensure accessibility,
-                        consistency, and usability across the site. These design
-                        decisions are based on client goals and user needs
-                        identified during earlier phases.
-                    </p>
+                </section>
+
+                <section class="cta-cards-section m-y-5">
+                    <h3>Explore LoopedIn</h3>
+
+                    <div class="cta-cards-grid">
+                        <article class="card cta-card">
+                            <a
+                                href="about.html"
+                                class="cta-card-link"
+                                aria-label="About LoopedIn"
+                            >
+                                <img
+                                    src="assets/collaboration.jpg"
+                                    alt="Two people collaborating on a laptop"
+                                    class="cta-card-image"
+                                    loading="lazy"
+                                />
+                                <div class="card-content">
+                                    <h3>About LoopedIn</h3>
+                                    <p>
+                                        Discover our mission, values, and the
+                                        team behind the platform.
+                                    </p>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="card cta-card">
+                            <a
+                                href="community_feed.html"
+                                class="cta-card-link"
+                                aria-label="Explore the Community"
+                            >
+                                <img
+                                    src="assets/community.jpg"
+                                    alt="Abstract tech network illustration"
+                                    class="cta-card-image"
+                                    loading="lazy"
+                                />
+                                <div class="card-content">
+                                    <h3>Explore the Community</h3>
+                                    <p>
+                                        See what's new: projects, discussions,
+                                        and insights from innovators.
+                                    </p>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="card cta-card">
+                            <a
+                                href="create_post.html"
+                                class="cta-card-link"
+                                aria-label="Join the Community"
+                            >
+                                <img
+                                    src="assets/community.webp"
+                                    alt="Community togetherness illustration"
+                                    class="cta-card-image"
+                                    loading="lazy"
+                                />
+                                <div class="card-content">
+                                    <h3>Join the Community</h3>
+                                    <p>
+                                        Introduce yourself and become part of
+                                        LoopedIn. Share a short message and
+                                        connect with fellow tech enthusiasts!
+                                    </p>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="card cta-card">
+                            <a
+                                href="news.html"
+                                class="cta-card-link"
+                                aria-label="Stay Updated with Tech News"
+                            >
+                                <img
+                                    src="assets/news.webp"
+                                    alt="Tech News illustration"
+                                    class="cta-card-image"
+                                    loading="lazy"
+                                />
+                                <div class="card-content">
+                                    <h3>Stay Updated with Tech News</h3>
+                                    <p>
+                                        Explore the latest trends,
+                                        breakthroughs, and stories shaping the
+                                        world of technology. Stay informed and
+                                        inspired.
+                                    </p>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
                 </section>
             </div>
         </main>
@@ -114,40 +199,6 @@
                     <h4>Platform</h4>
                     <ul>
                         <li><a href="about.html">About Us</a></li>
-                        <li><a href="#">How It Works</a></li>
-                        <li><a href="#">Careers</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4>Community</h4>
-                    <ul>
-                        <li><a href="#">Browse Discussions</a></li>
-                        <li><a href="#">Top Contributors</a></li>
-                        <li><a href="#">Events</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4>Support</h4>
-                    <ul>
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">Code of Conduct</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4>Legal</h4>
-                    <ul>
-                        <li>
-                            <a href="genai_mt_acknowledgement.html"
-                                >GenAI Acknowledgement</a
-                            >
-                        </li>
-                        <li>
-                            <a href="ethical_response.html">Ethical Response</a>
-                        </li>
                         <li>
                             <a href="implementation_rationale.html"
                                 >Implementation Rationale</a
@@ -155,10 +206,37 @@
                         </li>
                     </ul>
                 </div>
+
+                <div>
+                    <h4>Community</h4>
+                    <ul>
+                        <li>
+                            <a href="community_feed.html">Community Feed</a>
+                        </li>
+                        <li>
+                            <a href="create_post.html">Join the Community</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="news.html">Tech News</a></li>
+                        <li>
+                            <a href="ethical_response.html">Ethical Response</a>
+                        </li>
+                        <li>
+                            <a href="genai_mt_acknowledgement.html"
+                                >GenAI Acknowledgement</a
+                            >
+                        </li>
+                    </ul>
+                </div>
             </div>
 
             <div class="footer-bottom">
-                © 2025 LoopedIn. All rights reserved.
+                © 2025 Just Broch. All rights reserved.
             </div>
         </footer>
     </body>

@@ -7,6 +7,26 @@
     margin-top: 3rem;
 }
 
+.hero-section {
+    background-image: url('../../assets/back.webp'); 
+    background-size: cover; /* Dekker hele elementet */
+    background-position: center; /* Sentrerer bildet */
+    background-repeat: no-repeat; /* Hindrer repetisjon */
+
+    /* Bestem høyden på seksjonen */
+    min-height: 80vh; /* Dekker 80% av viewport høyde, juster til 100vh for full skjermhøyde */
+    height: auto; /* Lar innholdet dytte høyden om nødvendig */
+
+    display: flex; /* Bruker Flexbox for sentrering av innhold */
+    justify-content: center; /* Sentrerer horisontalt */
+    align-items: center; /* Sentrerer vertikalt */
+    text-align: left; /* Sentrerer tekst inni */
+    color: white; /* Tekstfarge over bildet */
+    position: relative; /* Nødvendig for overlay */
+    padding: 2rem; /* Legg til litt polstring */
+    box-sizing: border-box; /* Inkluderer polstring i bredde/høyde */
+}
+
 .card {
     background-color: var(--background-color);
     border-radius: 16px;
@@ -54,9 +74,26 @@
 /* site_map.css */
 @media (min-width: 768px) {
     .card {
-        width: calc(
-            33.33% - 14px
-        ); /* Approximately 3 cards per row with gap considered */
         margin-bottom: 20px; /* Add bottom margin for wrapped rows */
+    }
+}
+
+.cta-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+
+@media (min-width: 768px) {
+    .cta-cards-grid {
+        grid-template-columns: repeat(2, 1fr); /* To kolonner på desktop */
+    }
+}
+
+@media (min-width: 1024px) {
+    .cta-cards-grid {
+        grid-template-columns: repeat(2, 1fr); /* Holder på 2 kolonner også på større skjermer (eller kan utvide til 3) */
     }
 }

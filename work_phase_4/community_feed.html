@@ -9,94 +9,216 @@
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
-        <link rel="stylesheet" href="css/page_css/style_guide.css" />
-        <link rel="stylesheet" href="js/style_guide.js" />
-        <link rel="stylesheet" href="css/component_skeletons/gallery.css" />
-        <link rel="stylesheet" href="css/component_skeletons/viewer.css" />
+        <link rel="stylesheet" href="css/page_css/community_feed.css" />
+        <link rel="stylesheet" href="css/component_skeletons/card.css" />
 
         <link rel="icon" type="image/png" href="assets/16.png" />
 
-        <title>Work Phase 4</title>
+        <title>Community Feed - LoopedIn</title>
     </head>
     <body>
+        <!-- NAVIGATION -->
         <nav id="nav-mobile" aria-label="Main Navigation">
             <ul>
                 <li>
-                    <a href="index.html"><span class="icon">&#8962;</span></a>
+                    <a href="index.html" aria-label="Home">
+                        <span class="icon">&#127968;</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="site_map.html"
-                        ><span class="icon">&#9873;</span></a
-                    >
+                    <a href="about.html" aria-label="About">
+                        <span class="icon">&#8505;</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="style_guide.html" aria-current="page"
-                        ><span class="icon">&#9733;</span></a
-                    >
+                    <a href="community_feed.html" aria-current="page" aria-label="Community Feed">
+                        <span class="icon">&#128101;</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="ethical_response.html"
-                        ><span class="icon">&#9878;</span></a
-                    >
-                </li>
-                <li>
-                    <a href="genai_mt_acknowledgement.html"
-                        ><span class="icon">&#9776;</span></a
-                    >
+                    <a href="news.html" aria-label="News">
+                        <span class="icon">&#128240;</span>
+                    </a>
                 </li>
             </ul>
         </nav>
 
         <nav id="nav-desktop" aria-label="Main Navigation">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li>
+                    <a href="index.html" aria-current="page">
+                        <img
+                            src="assets/loop.svg"
+                            alt="LoopedIn Icon"
+                            style="vertical-align: middle; margin-right: 5px"
+                        />
+                        LoopedIn
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
                 <li>
                     <a href="community_feed.html" aria-current="page"
                         >Community Feed</a
                     >
                 </li>
-                <li><a href="ethical_response.html">Ethical Response</a></li>
-                <li><a href="genai_mt_acknowledgement.html">GenAI</a></li>
+                <li>
+                    <a href="news.html">News</a>
+                </li>
             </ul>
         </nav>
 
+        <!-- MAIN CONTENT -->
         <main>
-            <div class="container">
-                <h1>Community Feed</h1>
+            <h1 class="visually-hidden">LoopedIn Community Feed</h1>
 
-                <section class="card-container m-y-5">
-                    <div class="card">
-                        <h3>Visceral Design</h3>
+            <div class="container">
+                <h2 class="m-y-5">Community Feed</h2>
+
+                <!-- CTA SECTION -->
+                <article class="card" aria-labelledby="join-community-cta">
+                    <img
+                        src="assets/community.jpg"
+                        alt="Abstract tech network illustration"
+                        class="cta-card-image"
+                        loading="lazy"
+                    />
+                    <div class="card-content">
+                        <h3 id="join-community-cta">Join the Community</h3>
                         <p>
-                            How our design makes an immediate emotional impact.
+                            Introduce yourself and connect with fellow
+                            innovators! Share your passion and become part of
+                            our growing tech community.
                         </p>
-                        <button>
-                            <a href="visceral_design.html">Learn more</a>
-                        </button>
+                        <a href="create_post.html" class="button primary-button"
+                            >Join Now</a
+                        >
                     </div>
+                </article>
+
+                <!-- FEED SECTION -->
+                <section
+                    class="card-container m-y-5"
+                    aria-labelledby="feed-section-heading"
+                >
+                    <h2 id="feed-section-heading" class="visually-hidden">
+                        Latest Community Posts
+                    </h2>
+
+                    <!-- Example post 1 -->
                     <div class="card">
-                        <h3>Behavioural Design</h3>
-                        <p>
-                            How interaction and usability guide user behaviour.
-                        </p>
-                        <button>
-                            <a href="behavioural_design.html">Learn more</a>
-                        </button>
+                        <article class="feed-post">
+                            <div class="post-header">
+                                <img
+                                    src="assets/business_woman.png"
+                                    alt="Profile picture for Emma Kristiansen"
+                                    class="post-avatar"
+                                />
+                                <div class="post-user-info">
+                                    <h3 class="post-username">
+                                        Emma Kristiansen
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="post-content">
+                                <p>
+                                    Hi everyone! I'm passionate about IoT and
+                                    smart gardening. Looking forward to
+                                    connecting and learning from this great
+                                    community!
+                                </p>
+                            </div>
+                        </article>
                     </div>
+
+                    <!-- Example post 2 -->
                     <div class="card">
-                        <h3>Reflective Design</h3>
-                        <p>
-                            How the design supports long-term user values and
-                            identity.
-                        </p>
-                        <button>
-                            <a href="reflective_design.html">Learn more</a>
-                        </button>
+                        <article class="feed-post">
+                            <div class="post-header">
+                                <img
+                                    src="assets/coder.png"
+                                    alt="Profile picture for Alex Jansen"
+                                    class="post-avatar"
+                                />
+                                <div class="post-user-info">
+                                    <h3 class="post-username">Alex Jansen</h3>
+                                </div>
+                            </div>
+                            <div class="post-content">
+                                <p>
+                                    Excited to explore the world of home
+                                    automation! Just started tinkering with
+                                    ESP32 boards and Home Assistant. Great to be
+                                    here!
+                                </p>
+                            </div>
+                        </article>
                     </div>
+                </section>
+
+                <!-- DYNAMIC COMMUNITY LIST FROM API -->
+                <section id="community-list" class="m-t-5" aria-live="polite">
+                    <h2 class="visually-hidden">
+                        Latest Community Posts from API
+                    </h2>
+                    <!-- API content will be injected here -->
                 </section>
             </div>
         </main>
-        <script type="module" src="js/style_guide.js"></script>
+
+        <!-- FOOTER -->
+        <footer class="site-footer">
+            <div class="footer-columns">
+                <div>
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li>
+                            <a href="implementation_rationale.html"
+                                >Implementation Rationale</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Community</h4>
+                    <ul>
+                        <li>
+                            <a href="community_feed.html">Community Feed</a>
+                        </li>
+                        <li>
+                            <a href="create_post.html">Join the Community</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="news.html">Tech News</a></li>
+                        <li>
+                            <a href="ethical_response.html">Ethical Response</a>
+                        </li>
+                        <li>
+                            <a href="genai_mt_acknowledgement.html"
+                                >GenAI Acknowledgement</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                © 2025 Just Broch. All rights reserved.
+            </div>
+        </footer>
+
+        <!-- JS -->
+        <script type="module" src="js/community_feed.js"></script>
     </body>
 </html>

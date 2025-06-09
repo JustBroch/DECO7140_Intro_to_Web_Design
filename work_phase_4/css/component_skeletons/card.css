@@ -7,4 +7,16 @@
     box-shadow: none;
     transition: none;
     box-sizing: border-box;
+
+    /* NYTT: For å sikre at lang tekst bryter og holder seg innenfor kortet */
+    overflow-wrap: break-word; /* Standard for moderne nettlesere */
+    word-wrap: break-word; /* Fallback for eldre nettlesere (IE) */
+    overflow: hidden;
+}
+
+/* Dette gjelder for ALLE < img > elementer som er direkte barn av et .card */
+.card img {
+    max-width: 100%; /* Sørger for at bildet aldri er bredere enn forelder-elementet */
+    height: auto; /* Beholder bildets aspektforhold når det skaleres ned */
+    display: block; /* Fjerner eventuell ekstra plass under bildet (som standard inline-elementer kan ha) */
 }
