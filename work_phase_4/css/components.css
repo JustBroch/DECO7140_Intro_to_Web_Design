@@ -1,57 +1,59 @@
 @import "./component_skeletons/accordion.css";
 @import "base.css";
 
-/* MENUS */
-/* Base styles */
-nav ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+/* === GLOBAL === */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
 }
 
-/* Responsive control */
-
-#nav-mobile {
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
-    background-color: var(--secondary-color);
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-}
-
-#nav-mobile ul li a {
+.responsive-img {
     display: block;
-    padding: 1rem 0;
-    font-size: 1.5rem;
-    text-decoration: none;
-    z-index: 1000;
+    max-width: 100%;
+    height: auto;
+    margin: 1rem auto;
 }
 
+/* Accessibility improvements */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--primary-color, #1e40af);
+    outline-offset: 2px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#nav-desktop ul li a:focus-visible,
+#nav-mobile ul li a:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.cta-card-link:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 4px;
+}
+
+/* === NAVIGATION === */
+
+/* Desktop nav */
 #nav-desktop {
     position: fixed;
     top: 0;
     width: 100vw;
-    background-color: var(--background-color);
+    background-color: #f5f5f5;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
     display: none;
     z-index: 1000;
-}
-
-#nav-desktop ul li a {
-    display: block;
-    padding: 1rem 0;
-    font-size: 1.25rem;
-    text-decoration: none;
-    color: var(--text-color);
-}
-
-#nav-desktop ul li a:hover {
-    font-weight: bold;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #nav-desktop ul {
@@ -65,47 +67,93 @@ nav ul {
     gap: 2rem;
 }
 
+#nav-desktop ul li {
+    list-style: none;
+}
+
 #nav-desktop ul li:first-child {
     margin-right: auto;
 }
 
-.responsive-img {
+#nav-desktop ul li a {
     display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 1rem auto;
+    padding: 1rem 0;
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: #333333;
 }
 
-@media screen and (max-width: 767px) {
-    .container {
-        padding-bottom: 70px;
-    }
+#nav-desktop ul li a:hover,
+#nav-desktop ul li a:focus {
+    font-weight: bold;
+    text-decoration: underline;
+    outline: 2px solid #333333;
+    outline-offset: 2px;
 }
 
-@media screen and (min-width: 768px) {
-    #nav-desktop {
-        display: block;
-    }
-
-    #nav-mobile {
-        display: none;
-    }
+/* Mobile nav */
+#nav-mobile {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    background-color: #f5f5f5;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
-/* Hide h1 for accessibility at Home page */
-.visually-hidden {
-    position: absolute !important;
-    width: 1px !important;
-    height: 1px !important;
-    padding: 0 !important;
-    margin: -1px !important;
-    overflow: hidden !important;
-    clip: rect(0, 0, 0, 0) !important;
-    white-space: nowrap !important;
-    border: 0 !important;
+#nav-mobile ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-/* -- reusable container for cards -- */
+#nav-mobile ul li a {
+    display: block;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #333333;
+    z-index: 1000;
+}
+
+#nav-mobile ul li a:hover,
+#nav-mobile ul li a:focus {
+    font-weight: bold;
+    text-decoration: underline;
+    outline: 2px solid #333333;
+    outline-offset: 2px;
+}
+
+/* === HERO SECTION === */
+.hero-section {
+    background-image: url("../../assets/back.webp");
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    color: white;
+    position: relative;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.hero-section .hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+/* === CARD CONTAINERS === */
 .card-container {
     display: grid;
     flex-direction: column;
@@ -113,14 +161,7 @@ nav ul {
     padding: 1rem;
 }
 
-@media (min-width: 768px) {
-    .card-container {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-}
-
-/* --- Styles for forms --- */
+/* === FORMS === */
 .form-group {
     display: flex;
     flex-direction: column;
@@ -197,7 +238,7 @@ a.button {
     text-decoration: none;
 }
 
-/* --- News cards styling --- */
+/* === NEWS CARDS === */
 .news-card {
     background-color: white;
     border-radius: 10px;
@@ -243,7 +284,7 @@ a.button {
     margin-top: auto;
 }
 
-/* --- News Page Layout --- */
+/* === NEWS LAYOUT === */
 .news-grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -251,25 +292,7 @@ a.button {
     padding: 1rem;
 }
 
-@media (min-width: 768px) {
-    .news-grid-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 1024px) {
-    .news-grid-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (min-width: 1300px) {
-    .news-grid-container {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-/* --- CTA Cards styling --- */
+/* === CTA CARDS === */
 .cta-card {
     background-color: white;
     border-radius: 10px;
@@ -334,62 +357,10 @@ a.button {
     display: block;
 }
 
-/* Accessibility improvements */
-a:focus-visible,
-button:focus-visible {
-    outline: 3px solid var(--primary-color, #1e40af);
-    outline-offset: 2px;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-#nav-desktop ul li a:focus,
-#nav-mobile ul li a:focus {
-    outline: 2px solid var(--primary-color);
-    outline-offset: 2px;
-}
-
-.cta-card-link:focus {
-    outline: 2px solid var(--primary-color);
-    outline-offset: 4px;
-}
-
-.cta-card-link[aria-label] {
-    /* nothing needed visually — aria-label will fix screen reader mismatch */
-}
-
-/* === Hero section === */
-.hero-section {
-    background-image: url("../../assets/back.webp");
-    background-color: rgba(0, 0, 0, 0.5);
-    background-blend-mode: overlay;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-    color: white;
-    position: relative;
-    padding: 2rem;
-    box-sizing: border-box;
-}
-
-.hero-section .hero-content {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    display: inline-block;
-}
-
-/* === Footer === */
+/* === FOOTER === */
 .site-footer {
-    background-color: var(--accent-color);
-    color: #fff;
+    background-color: #f5f5f5;
+    color: #333333;
     padding: var(--space-4) var(--space-3);
     border-top: 1px solid #ccc;
     font-size: 1rem;
@@ -398,17 +369,20 @@ a:hover {
 .site-footer h4 {
     font-size: 1.2rem;
     margin-bottom: var(--space-2);
-    color: #fff;
+    color: #222222;
 }
 
 .site-footer a {
     text-decoration: none;
-    color: #fff;
+    color: #333333;
 }
 
-.site-footer a:hover {
+.site-footer a:hover,
+.site-footer a:focus {
     font-weight: bold;
-    text-decoration: none;
+    text-decoration: underline;
+    outline: 2px solid #333333;
+    outline-offset: 2px;
 }
 
 .site-footer .footer-columns {
@@ -434,5 +408,43 @@ a:hover {
     text-align: center;
     margin-top: var(--space-4);
     font-size: 0.9rem;
-    color: #ccc;
+    color: #666666;
+}
+
+/* === MEDIA QUERIES === */
+@media screen and (max-width: 767px) {
+    .container {
+        padding-bottom: 70px;
+    }
+}
+
+@media (min-width: 768px) {
+    #nav-desktop {
+        display: block;
+    }
+
+    #nav-mobile {
+        display: none;
+    }
+
+    .card-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .news-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .news-grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1300px) {
+    .news-grid-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }

@@ -71,112 +71,240 @@
         </nav>
 
         <!-- MAIN CONTENT -->
-        <main>
-            <div class="container">
-                <h1 class="m-y-5">Implementation Rationale</h1>
+        <main class="container" style="margin-top: 5rem">
+            <h1>Implementation Rationale</h1>
 
-                <!-- Landmark helper -->
-                <h2 class="visually-hidden">
-                    Implementation Rationale Content
-                </h2>
+            <section>
+                <h2>Alignment with Client and User Needs</h2>
+                <p>
+                    The LoopedIn website was developed in alignment with the
+                    <strong>Connect Communities Initiative (CCI)</strong>
+                    mission of fostering social cohesion and supporting
+                    community identity, with a particular focus on tech and
+                    innovation communities.
+                </p>
+                <p>
+                    The project specifically addresses the
+                    <em>Tech & Innovation Communities</em> stream from the
+                    Client Brief, which emphasises creating platforms where
+                    innovators can connect, share knowledge, and build
+                    visibility for their work.
+                </p>
+                <p>
+                    Throughout the design and implementation process, I
+                    prioritised <strong>features and structure</strong> that
+                    enable:
+                </p>
+                <ul>
+                    <li><strong>Discovery</strong> (News section)</li>
+                    <li>
+                        <strong>Interaction</strong> (Community Feed and Join
+                        the Community functionality)
+                    </li>
+                    <li>
+                        <strong>Identity and representation</strong> (Hero
+                        section and About page)
+                    </li>
+                </ul>
+                <p>The site provides two key interaction pathways:</p>
+                <ol>
+                    <li>
+                        <strong>For community members</strong> — tech
+                        enthusiasts and innovators looking to connect, post, and
+                        engage.
+                    </li>
+                    <li>
+                        <strong>For the wider public</strong> — people who wish
+                        to explore the community and learn from it.
+                    </li>
+                </ol>
+            </section>
 
-                <section>
-                    <h2>Alignment with Client and User Needs</h2>
-                    <p>
-                        The website was developed to align with the goals of the
-                        Connect Communities Initiative (CCI), focusing on
-                        building a space for tech innovators to connect,
-                        collaborate, and share knowledge. The design addresses
-                        the user needs identified in the A3 Design Proposal,
-                        including clarity, accessibility, and ease of navigation
-                        for both newcomers and experienced professionals. The
-                        platform’s structure and features reflect the priorities
-                        outlined in the client brief, supporting engagement
-                        through a community feed, interactive post creation, and
-                        accessible content.
-                    </p>
-                </section>
+            <section>
+                <h2>Accessibility and Ethical Considerations</h2>
+                <p>
+                    Accessibility was integrated from the beginning, guided by
+                    <strong>WCAG 2.2 Level AA</strong> standards:
+                </p>
+                <ul>
+                    <li>Keyboard navigation with visible focus indicators.</li>
+                    <li>ARIA labels for icon-based navigation.</li>
+                    <li>Semantic HTML with clear heading structure.</li>
+                    <li>Appropriate <code>alt</code> text for all images.</li>
+                    <li>Colour contrast checked and adjusted to pass audit.</li>
+                </ul>
+                <p>Ethical design was also a focus:</p>
+                <ul>
+                    <li>Inclusive content and imagery.</li>
+                    <li>
+                        Transparent integration of third-party tools
+                        (newsletter).
+                    </li>
+                    <li>Mobile-first design for broad access.</li>
+                </ul>
+                <p>
+                    In applying ethical design principles, I drew on the
+                    <strong>ACS Code of Ethics</strong> and structured reasoning
+                    approaches introduced in the course. Key stakeholders
+                    considered include:
+                </p>
+                <ul>
+                    <li>
+                        Site users (including potentially minors or marginalised
+                        groups)
+                    </li>
+                    <li>Site maintainers</li>
+                    <li>Developers</li>
+                    <li>Funders</li>
+                </ul>
+                <p>Relevant ACS principles applied include:</p>
+                <ul>
+                    <li><strong>Primacy of Public Interest</strong></li>
+                    <li><strong>Enhancement of Quality of Life</strong></li>
+                    <li><strong>Honesty</strong></li>
+                </ul>
+                <p>
+                    The decision to implement the newsletter feature in a
+                    transparent, opt-in manner reflects this reasoning, with an
+                    emphasis on informed consent, privacy, and user autonomy.
+                </p>
+            </section>
 
-                <section>
-                    <h2>Accessibility and Ethical Considerations</h2>
-                    <p>
-                        Accessibility principles guided the entire development
-                        process, with WCAG 2.2 Level AA standards implemented
-                        across navigation, forms, and content presentation.
-                        Colour contrasts, semantic HTML, and keyboard navigation
-                        have been carefully integrated. Ethical considerations,
-                        including transparency, user privacy, and inclusivity,
-                        were informed by A2 Design Research findings and applied
-                        to the handling of user-generated content and overall
-                        site interactions.
-                    </p>
-                </section>
+            <section>
+                <h2>Variations from A3 Design Proposal</h2>
+                <p>
+                    As is natural in an iterative process, several adjustments
+                    were made during implementation based on
+                    <strong>technical feasibility</strong> and
+                    <strong>project scope</strong>.
+                </p>
+                <p>The original site map proposed the following structure:</p>
+                <img
+                    src="assets/Site_Map.png"
+                    alt="Site Map from A3 Design Proposal"
+                    style="max-width: 100%; margin: 1rem 0"
+                />
+                <p>Key changes:</p>
+                <ul>
+                    <li>
+                        <strong>My Profile</strong>, <strong>Chat</strong>,
+                        <strong>Events</strong>, and
+                        <strong>Search</strong> were not implemented, as they
+                        were deemed non-essential and outside current scope.
+                    </li>
+                    <li>
+                        Core pages now include: Home, About, Community Feed,
+                        News, and Join the Community.
+                    </li>
+                    <li>
+                        Implementation Rationale and GenAI Acknowledgement are
+                        included in the footer.
+                    </li>
+                    <li>
+                        Join the Community now builds on the Work Phase 3 API
+                        and functions as an initial post creation page.
+                    </li>
+                    <li>
+                        The News section supports external content curation and
+                        engagement.
+                    </li>
+                </ul>
+            </section>
 
-                <section>
-                    <h2>Variations from A3 Design Proposal</h2>
-                    <p>
-                        Some adjustments were made during implementation to
-                        improve usability and technical feasibility. For
-                        example, the "News" section was introduced as a curated
-                        content area, enhancing engagement while remaining
-                        aligned with the original community-focused concept.
-                        Certain layout refinements were applied to improve
-                        responsiveness across devices. These changes remain
-                        consistent with the original design intent and user
-                        experience goals.
-                    </p>
-                </section>
+            <section>
+                <h2>Challenges and Strategies</h2>
+                <p>
+                    <strong>Accessibility Implementation:</strong>
+                </p>
+                <p>
+                    Initial challenges included ensuring proper ARIA labeling
+                    for icon navigation and consistent focus-visible styling
+                    across browsers.
+                </p>
+                <p>
+                    <strong>Scope Refinement:</strong>
+                </p>
+                <p>
+                    Proposed features like Chat and Profile were beyond scope;
+                    the focus shifted to delivering a high-quality core
+                    community experience.
+                </p>
+                <p>
+                    <strong>Responsive Design:</strong>
+                </p>
+                <p>
+                    Navigation was unified across desktop and mobile; layout
+                    grids were refined for consistent presentation on all
+                    devices.
+                </p>
+            </section>
 
-                <section>
-                    <h2>Challenges and Strategies</h2>
-                    <p>
-                        Key challenges included managing API integration for the
-                        community feed and ensuring consistent behaviour across
-                        different browsers and screen sizes. To address these,
-                        modular JavaScript was used to streamline data handling,
-                        and responsive CSS techniques were refined through
-                        iterative testing. Additionally, adjustments were made
-                        to button styling and form behaviour to maintain a clear
-                        and accessible user interface.
-                    </p>
-                </section>
+            <section>
+                <h2>Accessibility Audit</h2>
+                <p>
+                    An accessibility audit was conducted on the Home page using
+                    the IBM Equal Access Accessibility Checker (Chrome
+                    extension).
+                </p>
+                <p>
+                    After iterative improvements, the remaining issues are as
+                    follows:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Needs review:</strong> Confirm that Windows high
+                        contrast mode is supported when using CSS to include,
+                        position or alter non-decorative content. This requires
+                        manual verification, as automated tools cannot fully
+                        assess high contrast support.
+                    </li>
+                    <li>
+                        <strong>Needs review:</strong> Verify that color is not
+                        used as the only visual means of conveying information.
+                        While underlines and outlines have been added for
+                        interactive elements, this is flagged for manual review
+                        to ensure full compliance.
+                    </li>
+                    <li>
+                        <strong>Recommendation:</strong> The Github link in the
+                        footer opens in a new window (target="_blank"). An ARIA
+                        label has been added to inform the user, but the
+                        automated tool still flags this as a recommendation for
+                        improved clarity.
+                    </li>
+                    <li>
+                        <strong>Recommendation:</strong> The background image
+                        used in the hero section. This image is decorative and
+                        does not convey essential content. No alternative text
+                        is required, but this is flagged for manual verification
+                        in high contrast mode.
+                    </li>
+                </ul>
+                <p>
+                    Overall, the site now meets the key WCAG 2.2 Level AA
+                    requirements. The remaining items are either expected
+                    limitations of automated testing or flagged for manual
+                    review in future iterations.
+                </p>
+                <p>A screenshot of the audit results is included below:</p>
+                <img
+                    src="assets/IBM_screenshot.png"
+                    alt="IBM Equal Access Accessibility Checker audit results for index.html"
+                    class="responsive-img"
+                />
+            </section>
 
-                <section>
-                    <h2>Accessibility Audit</h2>
-                    <p>
-                        An accessibility audit was performed using the IBM Equal
-                        Access Accessibility Checker. The audit confirmed
-                        compliance with WCAG 2.2 Level AA, with minor
-                        adjustments made to improve label association and
-                        contrast in certain areas. A screenshot of the audit
-                        results is provided below.
-                    </p>
-                    <img
-                        src="assets/accessibility_audit_screenshot.png"
-                        alt="Screenshot of accessibility audit results showing compliance with WCAG 2.2 Level AA"
-                        class="responsive-img"
-                    />
-                    <p>
-                        The audit process provided valuable feedback, ensuring
-                        that the final implementation delivers an inclusive
-                        experience across diverse user groups.
-                    </p>
-                </section>
-
-                <section>
-                    <h2>GitHub Repository</h2>
-                    <p>
-                        The full source code for this project is available on
-                        GitHub:
-                        <a
-                            href="https://github.com/JustBrochUQ/deco7140_development-"
-                            target="_blank"
-                            rel="noopener"
-                            >View the project on GitHub</a
-                        >.
-                    </p>
-                </section>
-            </div>
+            <section>
+                <h2>GitHub Repository</h2>
+                <p>
+                    The full project code is available at:<br />
+                    <a
+                        href="https://github.com/JustBrochUQ/deco7140_development-"
+                        target="_blank"
+                        >https://github.com/JustBrochUQ/deco7140_development-</a
+                    >
+                </p>
+            </section>
         </main>
 
         <!-- FOOTER -->
@@ -185,13 +313,11 @@
                 <div>
                     <h4>Platform</h4>
                     <ul>
-                        <li><a href="about.html">About Us</a></li>
                         <li>
-                            <a
-                                href="implementation_rationale.html"
-                                aria-current="page"
-                                >Implementation Rationale</a
-                            >
+                            <a href="about.html">About Us</a>
+                        </li>
+                        <li>
+                            <a href="news.html">Tech News</a>
                         </li>
                     </ul>
                 </div>
@@ -209,15 +335,23 @@
                 </div>
 
                 <div>
-                    <h4>Resources</h4>
+                    <h4>Project</h4>
                     <ul>
-                        <li><a href="news.html">Tech News</a></li>
                         <li>
-                            <a href="ethical_response.html">Ethical Response</a>
+                            <a href="implementation_rationale.html"
+                                >Implementation Rationale</a
+                            >
                         </li>
                         <li>
                             <a href="genai_mt_acknowledgement.html"
                                 >GenAI Acknowledgement</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://github.com/JustBrochUQ/deco7140_development-"
+                                target="_blank"
+                                >Github</a
                             >
                         </li>
                     </ul>
