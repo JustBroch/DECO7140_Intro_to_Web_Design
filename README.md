@@ -76,7 +76,7 @@ LoopedIn supports collaboration and knowledge sharing among tech innovators, wit
 ## How to Run
 
 1. Clone or download this repository.
-2. Open `index.html` in any modern browser (Chrome, Firefox, Edge, Safari).
+2. Open `index.html` in any modern browser.
 
 ## Deployment
 
