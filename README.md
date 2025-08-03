@@ -76,7 +76,30 @@ LoopedIn supports collaboration and knowledge sharing among tech innovators, wit
 ## How to Run
 
 1. Clone or download this repository.
-2. Open `index.html` in any modern browser.
+
+You can view the project in one of the following ways:
+
+2. Open `index.html` with in any modern browser.
+
+    1. **Using a browser directly**
+
+    - Double-click `index.html` or drag it into any modern browser.
+
+    1. **Using Live Server in VS Code**
+
+    - Open the project folder in [Visual Studio Code](https://code.visualstudio.com/).
+    - Install the **Live Server** extension if not already installed.
+    - Right-click `index.html` and select **"Open with Live Server"**, or click **"Go Live"** in the bottom-right corner.
+
+    1. **Using the terminal**
+
+    - Navigate to the project folder in your terminal.
+    - Run one of the following commands:
+        - **macOS**: `open index.html`
+        - **Windows**: `start index.html`
+        - **Linux**: `xdg-open index.html`
+
+Once the site is open, click **Phase 4** in the navigation bar to access the final version of the system.
 
 ## Deployment
 
