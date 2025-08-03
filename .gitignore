@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Node.js)
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Logs
+*.log
+
+# System
+Thumbs.db
+Desktop.ini
